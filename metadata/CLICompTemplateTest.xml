@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><com.cisco.ifm.template.importExport.ExportContainer>
+  <confContainer class="com.cisco.ifm.config.model.CompositeTemplate">
+    <instanceUuid>966a531c-10ad-4bb6-bd39-629884ce5c28</instanceUuid>
+    <instanceId>4801807</instanceId>
+    <authEntityId>4801807</authEntityId>
+    <authEntityClass>707276031</authEntityClass>
+    <__orderedListOEIndex>0</__orderedListOEIndex>
+    <__creationOrderIndex>0</__creationOrderIndex>
+    <__isBeingChanged>false</__isBeingChanged>
+    <instanceVersion>0</instanceVersion>
+    <author>root</author>
+    <creationTime class="sql-timestamp">2016-08-10 20:56:09.342</creationTime>
+    <description>Test composite template</description>
+    <deviceType class="dynamic-proxy">Routers</deviceType>
+    <displayName>TestComp</displayName>
+    <hasMandatoryFields>false</hasMandatoryFields>
+    <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+    <name>TestComp</name>
+    <numberOfRuns>0</numberOfRuns>
+    <parentId>-1112</parentId>
+    <type>COMPOSITE</type>
+    <Tags class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+      <key class="long">4801807</key>
+      <dirty>false</dirty>
+    </Tags>
+    <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+      <key class="long">4801807</key>
+      <dirty>false</dirty>
+    </configGroupMNEMapping>
+    <memberOrder class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.memberOrder</role>
+      <key class="long">4801807</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <string>4801803</string>
+          <string>4801803</string>
+        </entry>
+        <entry>
+          <string>4801806</string>
+          <string>4801806</string>
+        </entry>
+      </storedSnapshot>
+      <set class="linked-hash-set">
+        <string>4801806</string>
+        <string>4801803</string>
+      </set>
+    </memberOrder>
+    <members class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.members</role>
+      <key class="long">4801807</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>6fe48f03-a738-48b8-80ad-fb5164f2e931</instanceUuid>
+            <instanceId>5940935</instanceId>
+            <authEntityId>5940935</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>4801806</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>70692620-60da-447d-92cc-7859062e581f</instanceUuid>
+            <instanceId>5940936</instanceId>
+            <authEntityId>5940936</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>4801803</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+      </storedSnapshot>
+      <set>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[2]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+      </set>
+    </members>
+  </confContainer>
+  <listContainers>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>446baea3-fa70-4334-80ee-083aa1748f08</instanceUuid>
+        <instanceId>4801806</instanceId>
+        <authEntityId>4801806</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>4799803</contentID>
+        <creationTime class="sql-timestamp">2016-08-10 20:41:09.082</creationTime>
+        <description> Default OSPF area 0 apply to EACH routing process (AS)</description>
+        <deviceType class="dynamic-proxy">Routers</deviceType>
+        <displayName>OSPF</displayName>
+        <hasMandatoryFields>false</hasMandatoryFields>
+        <iosVersion>12.2</iosVersion>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>OSPF</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <softwareType>IOS</softwareType>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">4801806</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">4801806</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description> Default OSPF area 0 apply to EACH routing process (AS)</description>
+            <author>root</author>
+            <tagList/>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for aname</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>OSPF interface name</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>loopback0</value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>OSPF_loopback</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>OSPF subnet specification</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>192.168.1.1</value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>OSPF_loopback_IP</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Router ID</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1</value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min>1</min>
+                      <max>65535</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>router_ID</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Identity Commands</name>
+                <cliName>identity</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>OSPF</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value>12.2</value>
+                  </minSupportedImageversion>
+                  <value>Routers</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>!!! MACRO name OSPF
+!!! Platform: Routers, OS: 12.2
+!!! Preconditions: IPBase, RoutingBase
+!!! Desc: Default OSPF area 0 apply to EACH routing process (AS)
+!!! Usage: clean
+!!! Vars: Only use &quot;_&quot; special characters in variable names
+!!! $OSPF_loopback : loopback0 ; OSPF interface name
+!!! $OSPF_loopback_IP : 192.168.1.1 ; OSPF subnet specification
+!!! $router_ID : 1 ; Router ID
+!!!
+feature ospf
+feature pim
+! comments
+  interface $OSPF_loopback ; 
+!!interface loopback0
+ ip address $OSPF_loopback_IP/32; only need to provide enough text to cover all variables on line below
+!!  ip address 10.10.1.1/32
+    ip router ospf DC-Underlay area 0.0.0.0
+    ip pim sparse-mode
+  
+router ospf DC-Underlay
+ router-id $router_ID; 
+!!    router-id 1
+    area 0.0.0.0 authentication message-digest
+    log-adjacency-changes detail
+!!!@
+</string>
+                </clicommand>
+                <name>identity</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform>IOS</platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>ba28e363-61c2-4b26-8635-6959269ef9af</instanceUuid>
+        <instanceId>4801803</instanceId>
+        <authEntityId>4801803</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>4799801</contentID>
+        <creationTime class="sql-timestamp">2016-07-28 22:43:58.06</creationTime>
+        <description> Best practice configuration for a IWAN IOS based Certificate Autoirty</description>
+        <deviceType class="dynamic-proxy">Routers</deviceType>
+        <displayName>CVD_IWAN_Certificate_Autority</displayName>
+        <hasMandatoryFields>false</hasMandatoryFields>
+        <iosVersion>15.5</iosVersion>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>CVD_IWAN_Certificate_Autority</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <softwareType>IOS</softwareType>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">4801803</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">4801803</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description> Best practice configuration for a IWAN IOS based Certificate Autoirty</description>
+            <author>root</author>
+            <tagList/>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for aname</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>IPv4 address of the router that will be hosting the CA</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_IPV4</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The Fully Qualified Domain Name of the device this configuration will be applied to.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_CN</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The Local of the signing autority. In the USA this is usually the city.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_L</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The State of the signing autority. In the USA this is usually the abbrieviated state name.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_ST</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The Country code of the signing autority. Country code is based off of two letter ISO naming format.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_C</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The lifetime of the issued certificates in number of days.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>730</value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>ISSUED_LIFETIME</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>The lifetime of the server signing certificate in number of days.</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1095</value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_LIFETIME</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Miles?</description>
+                    <htmlComponent>textbox</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label></label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <helpDescription></helpDescription>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>CA_FQDN</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Identity Commands</name>
+                <cliName>identity</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>CVD_IWAN_Certificate_Autority</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value>15.5</value>
+                  </minSupportedImageversion>
+                  <value>Routers</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>!!! MACRO name CVD_IWAN_Certificate_Autority
+!!! Platform: Routers, OS: 15.5
+!!! Preconditions:
+!!! Desc: Best practice configuration for a IWAN IOS based Certificate Autoirty
+!!! Usage: clean
+!!! Vars: Only use &quot;_&quot; special characters in variable names
+!!! $CA_IPV4: ; IPv4 address of the router that will be hosting the CA
+!!! $CA_CN: ; The Fully Qualified Domain Name of the device this configuration will be applied to.
+!!! $CA_L: ; The Local of the signing autority. In the USA this is usually the city.
+!!! $CA_ST: ; The State of the signing autority. In the USA this is usually the abbrieviated state name.
+!!! $CA_C: ; The Country code of the signing autority. Country code is based off of two letter ISO naming format.
+!!! $ISSUED_LIFETIME: 730; The lifetime of the issued certificates in number of days.
+!!! $CA_LIFETIME: 1095; The lifetime of the server signing certificate in number of days.
+!!! $CA_FQDN: ; Miles?
+!!!
+
+! Configure the Certificate Autority
+crypto pki server IWAN-IOS-CA
+ database level complete
+ no database archive
+ issuer-name CN=$CA_FQDN L=$CA_L St=$CA_ST C=$CA_C
+ grant auto
+ lifetime certificate $ISSUED_LIFETIME
+ lifetime ca-certificate $CA_LIFETIME
+ cdp-url http://$CA_IPV4/cgi-bin/pkiclient.exe?operation=GetCRL
+!!  cdp-url http://10.6.10.10/cgi-bin/pkiclient.exe?operation=GetCRL
+ database url crl nvram:
+ no shutdown
+! There is a passphrase that must be typed in here and confirmed when interacting with the CLI. Wondering how that is going to be solved with automation tools.
+!!!@
+</string>
+                </clicommand>
+                <name>identity</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform>IOS</platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+  </listContainers>
+</com.cisco.ifm.template.importExport.ExportContainer>

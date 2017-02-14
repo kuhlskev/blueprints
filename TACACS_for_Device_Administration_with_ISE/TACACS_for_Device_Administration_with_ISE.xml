@@ -1,0 +1,108 @@
+<ootb-template>
+<template-metadata name="TACACS_for_Device_Administration_with_ISE">
+<template-details>
+<description> TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="TACACS_SERVER1_NAME">
+<description>Name of the TACACS+ Server in IOS. Only relevant within device config.</description>
+<html-component>textbox</html-component>
+<default-value label="">TACACS-SERVER-1 </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="TACACS_SERVER1_IPV4">
+<description>IPv4 address of the TACACS+ Server being used for authentication.</description>
+<html-component>textbox</html-component>
+<default-value label="">10.4.48.35 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="TACACS_SERVER1_KEY">
+<description>TACACS+ Server Key for authenticating the device</description>
+<html-component>textbox</html-component>
+<default-value label=""> </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="TACACS_SERVER_INTERFACE">
+<description>Source interface for TACACS+ messages</description>
+<html-component>textbox</html-component>
+<default-value label="">Loopback0 </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name TACACS_for_Device_Administration_with_ISE
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1
+!!! Preconditions: 
+!!! Desc: TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable.
+!!! Usage: clean
+!!! Vars: Only use "_" special characters in variable names
+!!! $TACACS_SERVER1_NAME : TACACS-SERVER-1 ; Name of the TACACS+ Server in IOS. Only relevant within device config.
+!!! $TACACS_SERVER1_IPV4 : 10.4.48.35 ; IPv4 address of the TACACS+ Server being used for authentication.
+!!! $TACACS_SERVER1_KEY : ; TACACS+ Server Key for authenticating the device
+!!! $TACACS_SERVER_INTERFACE : Loopback0 ; Source interface for TACACS+ messages
+
+aaa new-model
+!
+tacacs server $TACACS_SERVER1_NAME
+!!tacacs server TACACS-SERVER-1
+  address ipv4 $TACACS_SERVER1_IPV4
+!!  address ipv4 10.4.48.35
+  key $TACACS_SERVER1_KEY
+!!  key tacacskey
+!
+aaa group server tacacs+ TACACS-SERVERS
+  server name $TACACS_SERVER1_NAME
+!!  server name TACACS-SERVER-1
+!
+ip tacacs source-interface $TACACS_SERVER_INTERFACE
+!!ip tacacs source-interface Loopback0
+!
+aaa authentication login default group TACACS-SERVERS local
+aaa authorization exec default group TACACS-SERVERS local
+aaa authorization console
+ip http authentication aaa
+!!!@
+</clicommand>
+</cli>
+</config>
+</ootb-template>

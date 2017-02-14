@@ -1,0 +1,91 @@
+<ootb-template>
+<template-metadata name="cts-identity-wired-access">
+<template-details>
+<description>Auto-generated description for cts-identity-wired-access</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="dns_server_ipv4">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="radius_server1_ipv4">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="radius_server1_key">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850, Catalyst6k
+!!! OS: IOSXE, IOS
+!!! Desc: Enable TrustSec identity on the wired access ports. ACL allows for only necessary protocols to pass before auth.
+!!! Vars: 
+!!! dns_server_ipv4
+!!! radius_server1_ipv4
+!!! radius_server1_key
+!!!
+
+authentication mac-move permit
+dot1x system-auth-control
+device-sensor accounting
+
+ip device tracking
+
+ip access-list extended PreAuth
+  remark Pre-authorization ACL for 802.1X
+  permit ip any host $dns_server_ipv4
+!!  permit ip any host dns_server_ipv4
+  permit udp any eq bootpc any eq bootps
+  permit udp any any eq domain
+  permit udp any any eq tftp
+  permit icmp any any echo
+  permit icmp any any echo-reply
+  deny ip any any
+
+aaa server radius dynamic-author
+  client $radius_server1_ipv4 server-key $radius_server1_key
+!!  client radius_server1_ipv4 server-key radius_server1_key
+  auth-type any</clicommand>
+</cli>
+</config>
+</ootb-template>

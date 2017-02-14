@@ -1,0 +1,41 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:ip>
+        <ns0:access-list>
+          <ns0:extended>
+            <ns0:name>PreAuth</ns0:name>
+          </ns0:extended>
+        </ns0:access-list>
+        <ns0:device>
+          <ns0:tracking annotation="&amp; device-sensor accounting" />
+        </ns0:device>
+      </ns0:ip>
+      <ns0:authentication>
+        <ns0:mac-move annotation="!! Platform: Catalyst3850, Catalyst6k !! OS: IOSXE, IOS !! Desc: Enable TrustSec identity on the wired access ports. ACL allows for only necessary protocols to pass before auth. !! Vars: !! dns_server_ipv4 !! radius_server1_ipv4 !! radius_server1_key !!">
+          <ns0:permit />
+        </ns0:mac-move>
+      </ns0:authentication>
+      <ns0:dot1x>
+        <ns0:system-auth-control />
+      </ns0:dot1x>
+      <ns0:aaa>
+        <ns0:server>
+          <ns0:radius>
+            <ns0:dynamic-author annotation="%   remark Pre-authorization ACL for 802.1X !  permit ip any host $dns_server_ipv4 %   permit ip any host dns_server_ipv4 %   permit udp any eq bootpc any eq bootps %   permit udp any any eq domain %   permit udp any any eq tftp %   permit icmp any any echo %   permit icmp any any echo-reply %   deny ip any any">
+              <ns0:client>{{ dns_server_ipv4 | ipaddr('address') }}<ns0:ip>radius_server1_ipv4</ns0:ip>
+                <ns0:server-key>
+                  <ns0:string annotation="!  client $radius_server1_ipv4 server-key $radius_server1_key">{{ radius_server1_ipv4 | ipaddr('address') }}</ns0:string>
+                </ns0:server-key>
+              </ns0:client>
+              <ns0:auth-type>any</ns0:auth-type>
+            </ns0:dynamic-author>
+          </ns0:radius>
+        </ns0:server>
+      </ns0:aaa>
+    </ns0:native>
+  </config>
+</edit-config>

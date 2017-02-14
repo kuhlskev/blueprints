@@ -1,0 +1,14 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:spanning-tree>
+        <ns0:portfast annotation="!! Platform: Catalyst3850 !! OS: IOSXE 16.3.1 !! Desc: AAA Interface config for base Access Identity Policy Identity Based Networking !! Vars: !! access_interface_type !! access_interface_index !! access_identity_policy !interface $access_interface_type $access_interface_index &amp; interface access_interface_type access_interface_index &amp;   authentication timer reauthenticate server &amp;   access-session host-mode multi-domain &amp;   access-session closed &amp;   access-session port-control auto &amp;   mab &amp;   dot1x pae authenticator">
+          <ns0:default>{{ ibnsintGrouping.access_interface_type | string() }}</ns0:default>
+        </ns0:portfast>
+      </ns0:spanning-tree>
+    </ns0:native>
+  </config>
+</edit-config>

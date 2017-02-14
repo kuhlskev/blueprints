@@ -1,0 +1,65 @@
+<ootb-template>
+<template-metadata name="ibnsauthmgrint">
+<template-details>
+<description>Auto-generated description for ibnsauthmgrint</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="access_interface_type">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">GigabitEthernet</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="access_interface_index">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">1/0/1</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA Interface config for base Identity Based Networking
+!!! Vars: 
+!!! access_interface_type
+!!! access_interface_index
+
+interface $access_interface_type$access_interface_index
+!!interface access_interface_typeaccess_interface_index
+ authentication host-mode multi-domain
+ authentication order dot1x mab webauth
+ authentication port-control auto
+ authentication periodic
+ authentication timer reauthenticate server
+ mab
+ dot1x pae authenticator
+</clicommand>
+</cli>
+</config>
+</ootb-template>

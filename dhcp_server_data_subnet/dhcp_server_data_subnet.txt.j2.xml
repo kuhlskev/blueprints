@@ -1,0 +1,23 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:service annotation="!! MACRO name dhcp_server_data_subnet !! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, Cat3750X, Cat3850, Cat3650 OS: !! Preconditions: !! Desc: Cisco devices can act as DHCP Servers. This example shows how to configure DHCP and some standard parameters for a Data subnet in a scope. !! Usage: clean !! Tags: dhcp, options, pool !! Vars: Only use &quot;_&quot; special characters in variable names !! $dhcp_pool_name: ; Descriptive name for the DHCP scope. !! $dhcp_ipv4_network_address: ; Network address for the DHCP IPv4 scope. !! $dhcp_ipv4_network_subnet_mask: ; Subnet mask of the network address for the DHCP IPv4 scope. !! $default_gateway_ipv4_address: ; Default gateway for the DHCP IPv4 scope. !! $dns_server1_ipv4_address: ; Primary DNS server for the DHCP scope. !! $dns_server2_ipv4_address: ; Secondary DNS server for the DHCP scope. !! $dhcp_domain_name: ; Domain name for the DHCP scope. !! $dhcp_lease_time_in_days: ; DHCP lease time in days for the scope.">
+        <ns0:dhcp>{{ dhcp_lease_time_in_days | int() }}</ns0:dhcp>
+      </ns0:service>
+      <ns0:ip>
+        <ns0:dhcp>
+          <ns0:pool annotation="!ip dhcp pool $dhcp_pool_name">
+            <ns0:id>{{ dhcp_pool_name | string() }}</ns0:id>
+            <ns0:default-router>default_gateway_ipv4_address</ns0:default-router>
+            <ns0:dns-server>dns_server1_ipv4_address</ns0:dns-server>
+            <ns0:dns-server>dns_server2_ipv4_address</ns0:dns-server>
+            <ns0:domain-name annotation="! domain-name $dhcp_domain_name">{{ dhcp_domain_name | string() }}</ns0:domain-name>
+          </ns0:pool>
+        </ns0:dhcp>
+      </ns0:ip>
+    </ns0:native>
+  </config>
+</edit-config>

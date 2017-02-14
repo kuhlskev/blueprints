@@ -1,0 +1,185 @@
+<ns0:config-template xmlns:ns0="http://tail-f.com/ns/config/1.0" xmlns:ns1="http://tail-f.com/ns/ncs" xmlns:ns2="http://cisco.com/ns/yang/ned/ios" service-point="aServicePoint" servicepoint="sp">
+	<ns1:devices>
+		<ns1:device>
+			<ns1:name>{/aServicePoint/device-name}</ns1:name>
+		<config>
+    <ns2:native>
+      <ns2:vrf>
+        <ns2:definition annotation="!! MACRO name CVD_IWAN_Hybrid_Hub_INET_WAN_Connectivity !! Platform: Routers, OS: 15.5 !! Preconditions: !! Desc: Best practice configuration for Hybrid IWAN WAN Connectivity for a INET Hub !! Usage: clean !! Vars: Only use &quot;_&quot; special characters in variable names !! $INET_WAN_INTERFACE: ; The physical interface to which the Internet (DMZ) will be connected !! $INET_WAN_IPV4: ; The IPv4 address used for Internet peering. Provided by the SP. !! $INET_WAN_IPV4_MASK: ; The IPv4 mask used for Internet peering.  Provided by the SP. !! $INET_WAN_DEFAULT_ROUTE: ; The IPv4 default gateway for Internet peering. Provided by the SP. !! $PRE_SHARED_KEY: ; The PSK for IWAN transport encryption !! $TUNNEL_IPV4: ; The tunnel interface IPv4 address !! $TUNNEL_IPV4_MASK: ; The tunnel interface IPv4 mask !! $TUNNEL_BANDWIDTH: ; The bandwidth of the WAN link measure in ???? !! $TUNNEL_SOURCE_INTERFACE: ; The WAN interface of the router. !! $NHRP_AUTHENTICATION: ; The NHRP PSK that will be used to secure the protocol. !! $LOOPBACK: Loopback0; The source interace in which communication to the master controller should originate !! $MASTER_CONTROLLER_IPV4: ; The IPv4 address of the Hub Master Controller !! $MASTER_CONTROLLER_PSK: ; The PSK of the Hub Master Controller !! $TRANSPORT_NUM: ; Needs description !! Configure the FVRF for WAN Connectivity">
+          <ns2:name>IWAN-TRANSPORT-2</ns2:name>
+          <ns2:address-family>
+            <ns2:ipv4 />
+          </ns2:address-family>
+        </ns2:definition>
+      </ns2:vrf>
+      <ns2:ip>
+        <ns2:route>
+          <ns2:vrf>
+            <ns2:name>IWAN-TRANSPORT-2</ns2:name>
+            <ns2:ip-route-interface-forwarding-list>
+              <ns2:prefix>0.0.0.0</ns2:prefix>
+              <ns2:mask>0.0.0.0</ns2:mask>
+              <ns2:interface-name-list>
+                <ns2:intf>192.168.146.1</ns2:intf>
+              </ns2:interface-name-list>
+            </ns2:ip-route-interface-forwarding-list>
+          </ns2:vrf>
+        </ns2:route>
+      </ns2:ip>
+      <ns2:interface>
+        <ns2:GigabitEthernet annotation="Configure the INET WAN Interface !interface $INET_WAN_INTERFACE">
+          <ns2:name>0/0/3</ns2:name>
+          <ns2:vrf>
+            <ns2:forwarding>IWAN-TRANSPORT-2</ns2:forwarding>
+          </ns2:vrf>
+          <ns2:ip>
+            <ns2:address>
+              <ns2:primary>
+                <ns2:address annotation="!ip address $INET_WAN_IPV4 $INET_WAN_IPV4_MASK">192.168.146.10</ns2:address>
+                <ns2:mask>255.255.255.0</ns2:mask>
+              </ns2:primary>
+            </ns2:address>
+          </ns2:ip>
+        </ns2:GigabitEthernet>
+        <ns2:Tunnel annotation="Identify the path">
+          <ns2:name>11</ns2:name>
+          <ns2:bandwidth>
+            <ns2:kilobits annotation="!bandwidth $TUNNEL_BANDWIDTH">300000</ns2:kilobits>
+          </ns2:bandwidth>
+          <ns2:delay>20000</ns2:delay>
+          <ns2:domain>
+            <ns2:name annotation="Create the Hub Border Router domain">iwan</ns2:name>
+            <ns2:path>INET</ns2:path>
+            <ns2:path-id>2</ns2:path-id>
+          </ns2:domain>
+          <ns2:ip>
+            <ns2:address>
+              <ns2:primary>
+                <ns2:address annotation="!ip address $TUNNEL_IPV4 $TUNNEL_IPV4_MASK">10.6.34.11</ns2:address>
+                <ns2:mask>255.255.254.0</ns2:mask>
+              </ns2:primary>
+            </ns2:address>
+            <ns2:nhrp>
+              <ns2:authentication annotation="Configure NHRP on the tunnel !ip nhrp authentication $NHRP_AUTHENTICATION">cisco123</ns2:authentication>
+              <ns2:holdtime>600</ns2:holdtime>
+              <ns2:map>
+                <ns2:multicast>
+                  <ns2:dynamic />
+                </ns2:multicast>
+              </ns2:map>
+              <ns2:network-id>102</ns2:network-id>
+              <ns2:redirect />
+            </ns2:nhrp>
+            <ns2:pim annotation="Enable PIM NBMA mode for the tunnel">
+              <ns2:nbma-mode />
+            </ns2:pim>
+            <ns2:redirects>false</ns2:redirects>
+            <ns2:tcp>
+              <ns2:adjust-mss>1360</ns2:adjust-mss>
+            </ns2:tcp>
+            <ns2:mtu>1400</ns2:mtu>
+          </ns2:ip>
+          <ns2:tunnel>
+            <ns2:source annotation="Configure additional tunnel parameters. !tunnel source $TUNNEL_SOURCE_INTERFACE">GigabitEthernet0/0</ns2:source>
+            <ns2:key>101</ns2:key>
+            <ns2:mode>
+              <ns2:gre>
+                <ns2:multipoint />
+              </ns2:gre>
+            </ns2:mode>
+            <ns2:protection>
+              <ns2:ipsec>
+                <ns2:profile>DMVPN-PROFILE-TRANSPORT-2</ns2:profile>
+              </ns2:ipsec>
+            </ns2:protection>
+            <ns2:vrf>IWAN-TRANSPORT-2</ns2:vrf>
+          </ns2:tunnel>
+        </ns2:Tunnel>
+      </ns2:interface>
+      <ns2:crypto>
+        <ns2:ikev2>
+          <ns2:keyring annotation="Configure the crypto keyring for pre-shared keys !crypto ikev2 keyring DMVPN-KEYRING-$TRANSPORT_NUM">
+            <ns2:name>DMVPN-KEYRING-1</ns2:name>
+            <ns2:peer>
+              <ns2:name>ANY</ns2:name>
+              <ns2:address>
+                <ns2:ipv4>
+                  <ns2:ipv4-address>0.0.0.0</ns2:ipv4-address>
+                  <ns2:ipv4-mask>0.0.0.0</ns2:ipv4-mask>
+                </ns2:ipv4>
+              </ns2:address>
+              <ns2:pre-shared-key>
+                <ns2:key>$PRE_SHARED_KEY</ns2:key>
+              </ns2:pre-shared-key>
+            </ns2:peer>
+          </ns2:keyring>
+          <ns2:profile annotation="Configure the IKEv2 profile">
+            <ns2:name>FVRF-IKEv2-IWAN-TRANSPORT-2</ns2:name>
+            <ns2:authentication>
+              <ns2:local>
+                <ns2:pre-share />
+              </ns2:local>
+              <ns2:remote>
+                <ns2:pre-share />
+              </ns2:remote>
+            </ns2:authentication>
+            <ns2:keyring>
+              <ns2:local>DMVPN-KEYRING-2</ns2:local>
+            </ns2:keyring>
+            <ns2:match>
+              <ns2:fvrf>
+                <ns2:name>IWAN-TRANSPORT-2</ns2:name>
+              </ns2:fvrf>
+              <ns2:identity>
+                <ns2:remote>
+                  <ns2:address>
+                    <ns2:ipv4>
+                      <ns2:ipv4-address>0.0.0.0</ns2:ipv4-address>
+                    </ns2:ipv4>
+                  </ns2:address>
+                </ns2:remote>
+              </ns2:identity>
+            </ns2:match>
+          </ns2:profile>
+          <ns2:proposal annotation="Configure the IKEv2 proposal">
+            <ns2:name>AES/CBC/256</ns2:name>
+            <ns2:encryption>
+              <ns2:aes-cbc-256 />
+            </ns2:encryption>
+            <ns2:group>
+              <ns2:fourteen />
+            </ns2:group>
+            <ns2:integrity>
+              <ns2:sha512 />
+            </ns2:integrity>
+          </ns2:proposal>
+        </ns2:ikev2>
+        <ns2:ipsec>
+          <ns2:profile annotation="Configure the IPsec profile">
+            <ns2:name>DMVPN-PROFILE-TRANSPORT-2</ns2:name>
+            <ns2:set>
+              <ns2:ikev2-profile>FVRF-IKEv2-IWAN-TRANSPORT-2</ns2:ikev2-profile>
+              <ns2:transform-set>AES256/SHA/TRANSPORT</ns2:transform-set>
+            </ns2:set>
+          </ns2:profile>
+          <ns2:security-association>
+            <ns2:replay>
+              <ns2:window-size annotation="! Increase the IPsec anti-replay window size">1024</ns2:window-size>
+            </ns2:replay>
+          </ns2:security-association>
+          <ns2:transform-set>
+            <ns2:tag>AES256/SHA/TRANSPORT</ns2:tag>
+            <ns2:esp annotation="Define the IPsec transform set">esp-aes</ns2:esp>
+            <ns2:key-bit>256</ns2:key-bit>
+            <ns2:esp-hmac>esp-sha-hmac</ns2:esp-hmac>
+            <ns2:mode>
+              <ns2:transport />
+            </ns2:mode>
+          </ns2:transform-set>
+        </ns2:ipsec>
+      </ns2:crypto>
+    </ns2:native>
+  </config>
+</ns1:device>
+	</ns1:devices>
+</ns0:config-template>

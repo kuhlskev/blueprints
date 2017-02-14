@@ -1,0 +1,143 @@
+<ootb-template>
+<template-metadata name="ibnsauthmgr">
+<template-details>
+<description>Auto-generated description for ibnsauthmgr</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="radius_group">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radius_server_ip">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="radius_key">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radius_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radious_auth_port">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">1645</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radious_acct_port">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">1646</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Routers, Switches OS: 12.2
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1
+!!! Desc: AAA config for base Identity Based Networking
+!!! Vars: 
+!!! radius_group
+!!! radius_server
+!!! radius_server_ip
+!!! radius_auth_port
+!!! radius_acct_port
+!!! radius_key
+
+
+aaa authentication dot1x default group $radius_group
+!!aaa authentication dot1x default group radius_group
+aaa authorization network default group $radius_group local
+!!aaa authorization network default group radius_group local
+aaa authorization auth-proxy default group $radius_group
+!!aaa authorization auth-proxy default group radius_group
+aaa accounting network default start-stop group $radius_group
+!!aaa accounting network default start-stop group radius_group
+!
+aaa server radius dynamic-author
+ client $radius_server_ip server-key $radius_key
+!! client radius_server_ip server-key radius_key
+ auth-type any
+! 
+radius server $radius_server
+!!radius server radius_server
+ address ipv4 $radius_server_ip auth-port $radious_auth_port acct-port $radious_acct_port
+!! address ipv4 radius_server_ip auth-port radious_auth_port acct-port radious_acct_port
+ key radius
+!
+radius-server dead-criteria time 10 tries 1
+radius-server deadtime 1
+!
+aaa group server radius $radius_group
+!!aaa group server radius radius_group
+ server name $radius_server
+!! server name radius_server
+!
+aaa new-model
+aaa session-id common  
+</clicommand>
+</cli>
+</config>
+</ootb-template>

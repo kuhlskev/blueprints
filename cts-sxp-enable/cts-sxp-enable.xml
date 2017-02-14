@@ -1,0 +1,60 @@
+<ootb-template>
+<template-metadata name="cts-sxp-enable">
+<template-details>
+<description>Auto-generated description for cts-sxp-enable</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="sxp_source_address">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="sxp_password">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850, Catalyst6k
+!!! OS: IOSXE, IOS
+!!! Desc: Configure SXP on IOS Devices. This will help propegate Cisco TrustSec inline tagging.
+!!! Vars: 
+!!! sxp_source_address
+!!! sxp_password
+!!!
+
+cts sxp enable
+cts sxp default source-ip $sxp_source_address
+!!cts sxp default source-ip sxp_source_address
+cts sxp default password $sxp_password!!cts sxp default password sxp_password</clicommand>
+</cli>
+</config>
+</ootb-template>

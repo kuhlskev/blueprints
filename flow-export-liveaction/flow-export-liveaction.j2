@@ -1,0 +1,56 @@
+!!! Platform: ISR4451, ISR4431, ISR4321 
+!!! OS: IOSXE
+!!! Desc: Flow record, exporter, and monitor configuration for LiveAction. This configuration contains only the flow records that LiveAction can use.
+!!! Vars: 
+!!! flow_collector_ipv4
+!!! netflow_source_interface
+!!! flow_monitor_interface
+!!!
+
+flow record Record-FNF-IWAN
+  description Flexible NetFlow for IWAN Monitoring
+  match flow direction
+  match interface input
+  match ipv4 destination address
+  match ipv4 protocol
+  match ipv4 source address
+  match ipv4 tos
+  match transport destination-port
+  match transport source-port
+  collect application name
+  collect counter bytes
+  collect counter packets
+  collect flow sampler
+  collect interface output
+  collect ipv4 destination mask
+  collect ipv4 dscp
+  collect ipv4 id
+  collect ipv4 source mask
+  collect ipv4 source prefix
+  collect routing destination as
+  collect routing next-hop address ipv4
+  collect routing source as
+  collect timestamp sys-uptime first
+  collect timestamp sys-uptime last
+  collect transport tcp flags
+!
+flow exporter Export-FNF-Monitor-LA
+  description FNFv9 NBAR2 with LiveAction
+  destination {{ flow_collector_ipv4| ipaddr('address') }}
+  source {{ netflow_source_interface| default("Loopback0")| string() }}
+  transport udp 2055
+  template data timeout 600
+  option interface-table
+  option application-table
+  option application-attributes
+!
+flow monitor Monitor-FNF-IWAN
+  description IWAN Traffic Analysis 
+  record Record-FNF-IWAN
+  exporter Export-FNF-Monitor-LA
+  cache timeout active 60
+  cache timeout inactive 10
+!
+interface {{ flow_monitor_interface| string() }}
+  ip flow monitor Monitor-FNF-IWAN input
+  ip flow monitor Monitor-FNF-IWAN output

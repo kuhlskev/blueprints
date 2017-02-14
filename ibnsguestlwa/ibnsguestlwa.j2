@@ -1,0 +1,34 @@
+!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA config for Custom Webauth Policy for Identity Based Networking
+!!! Vars: 
+!!! webauth_policy
+!!! webauth_custom_policy
+!!! webauth_custom_map
+!!! webauth_ip
+!!! access_interface_type
+!!! access_interface_index
+
+policy-map type control subscriber {{webauth_custom_policy | default('WebAuth_POLICY_CWA') | str()}}
+
+ event session-started match-all
+ 10 class always do-until-failure
+ 10 authenticate using webauth parameter-map LWA_WebAuth_Map_Custom
+policy-map type control subscriber {{webauth_policy | default('WebAuth_POLICY_CWA') | str()}}
+ event session-started match-all
+ 10 class always do-until-failure
+ 10 authenticate using webauth
+parameter-map type webauth global
+ type webauth
+ timeout init-state sec 3000
+ virtual-ip ipv4 {{webauth_ip | ipaddr('address')}}
+parameter-map type webauth {{webauth_custom_map | default('LWA_WebAuth_Map_Custom') | str()}}
+ type webauth
+ custom-page login device flash:web-login.html
+ custom-page success device flash:web-success.html
+ custom-page failure device flash:web-fail.html
+ custom-page login expired device flash:web-expired.html
+interface {{access_interface_type | default('GigabitEthernet') | str()}}{{access_interface_index | default('1/0/1') | str()}}
+ access-session port-control auto
+ service-policy type control subscriber {{webauth_custom_policy | default('WebAuth_POLICY_CWA') | str()}}
+ service-policy type control subscriber {{webauth_policy | default('WebAuth_POLICY_CWA') | str()}}

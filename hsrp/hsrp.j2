@@ -1,0 +1,17 @@
+!!! MACRO name TACACS_for_Device_Administration_with_ISE
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1
+!!! Preconditions:
+!!! Desc: TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable.
+!!! Usage: clean
+!!! Vars: 
+!!! interface_type
+!!! int_id
+!!! hsrp_index
+!!! hsrp_key
+!!! dhcp_server
+
+interface {{interface_type| string() }} {{ int_id | string()}}
+ standby version 2
+ standby {{ hsrp_index | int()}} ip {{ dhcp_server| ipaddr('address') }}
+ standby {{ hsrp_index | int()}} preempt
+ standby {{ hsrp_index | int()}} authentication md5 key-string {{ hsrp_key | string()}}

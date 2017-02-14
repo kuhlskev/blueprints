@@ -1,0 +1,62 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:radius-server>
+        <ns0:retransmit>12</ns0:retransmit>
+      </ns0:radius-server>
+      <ns0:radius>
+        <ns0:server annotation="!radius server $radius_server">
+          <ns0:id>{{ ibnsaaaGrouping.radius_server | string() }}</ns0:id>
+          <ns0:key>
+            <ns0:key annotation="! address ipv4 $radius_server_ip auth-port $radius_auth_port acct-port $radius_acct_port &amp;  address ipv4 radius_server_ip auth-port radius_auth_port acct-port radius_acct_port ! key $radius_key">{{ ibnsaaaGrouping.radius_key | string() }}</ns0:key>
+          </ns0:key>
+        </ns0:server>
+      </ns0:radius>
+      <ns0:aaa>
+        <ns0:new-model />
+        <ns0:group>
+          <ns0:server>
+            <ns0:radius annotation="!aaa group server radius $radius_group">
+              <ns0:name>{{ ibnsaaaGrouping.radius_group | string() }}</ns0:name>
+              <ns0:server>
+                <ns0:name annotation="! server name $radius_server">
+                  <ns0:name>{{ ibnsaaaGrouping.radius_server | string() }}</ns0:name>
+                </ns0:name>
+              </ns0:server>
+            </ns0:radius>
+          </ns0:server>
+        </ns0:group>
+        <ns0:authentication>
+          <ns0:dot1x>
+            <ns0:default>
+              <ns0:group annotation="!! Platform: Catalyst3850 !! OS: IOSXE 16.3.1 !! Desc: AAA config for base Identity Based Networking !! Vars: !! radius_group !! radius_server !! radius_server_ip !! radius_auth_port !! radius_acct_port !! radius_key !aaa authentication dot1x default group $radius_group">{{ ibnsaaaGrouping.radius_group | string() }}</ns0:group>
+            </ns0:default>
+          </ns0:dot1x>
+        </ns0:authentication>
+        <ns0:authorization>
+          <ns0:network>
+            <ns0:id>default</ns0:id>
+            <ns0:a1>
+              <ns0:group annotation="!aaa authorization network default group $radius_group local">{{ ibnsaaaGrouping.radius_group | string() }}</ns0:group>
+            </ns0:a1>
+            <ns0:a2>
+              <ns0:local />
+            </ns0:a2>
+          </ns0:network>
+        </ns0:authorization>
+        <ns0:accounting>
+          <ns0:dot1x>
+            <ns0:name>default</ns0:name>
+            <ns0:start-stop>
+              <ns0:group>radius</ns0:group>
+            </ns0:start-stop>
+          </ns0:dot1x>
+        </ns0:accounting>
+        <ns0:session-id>common</ns0:session-id>
+      </ns0:aaa>
+    </ns0:native>
+  </config>
+</edit-config>

@@ -1,0 +1,62 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:ip>
+        <ns0:http>
+          <ns0:authentication>
+            <ns0:aaa />
+          </ns0:authentication>
+        </ns0:http>
+      </ns0:ip>
+      <ns0:tacacs>
+        <ns0:server annotation="!tacacs server $TACACS_SERVER1_NAME">
+          <ns0:name>{{ aGrouping.TACACS_SERVER1_NAME | string() }}</ns0:name>
+          <ns0:address>
+            <ns0:ipv4 annotation="!address ipv4 $TACACS_SERVER1_IPV4">{{ aGrouping.TACACS_SERVER1_IPV4 | ipv4('address') }}</ns0:ipv4>
+          </ns0:address>
+          <ns0:key>
+            <ns0:key annotation="!key $TACACS_SERVER1_KEY">{{ aGrouping.TACACS_SERVER1_KEY | string() }}</ns0:key>
+          </ns0:key>
+        </ns0:server>
+      </ns0:tacacs>
+      <ns0:aaa annotation="!! MACRO name TACACS_for_Device_Administration_with_ISE !! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1 !! Preconditions: !! Desc: TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable. !! Usage: clean !! Vars: Only use &quot;_&quot; special characters in variable names !! $TACACS_SERVER1_NAME : TACACS-SERVER-1 ; Name of the TACACS+ Server in IOS. Only relevant within device config. !! $TACACS_SERVER1_IPV4 : 10.4.48.35 ; IPv4 address of the TACACS+ Server being used for authentication. !! $TACACS_SERVER1_KEY : ; TACACS+ Server Key for authenticating the device !! $TACACS_SERVER_INTERFACE : Loopback0 ; Source interface for TACACS+ messages">
+        <ns0:new-model>{{ aGrouping.TACACS_SERVER_INTERFACE | string() }}</ns0:new-model>
+        <ns0:group>
+          <ns0:server>
+            <ns0:tacacsplus>
+              <ns0:name>TACACS-SERVERS</ns0:name>
+              <ns0:server>
+                <ns0:name annotation="!server name $TACACS_SERVER1_NAME">{{ aGrouping.TACACS_SERVER1_NAME | string() }}</ns0:name>
+              </ns0:server>
+              <ns0:ip>
+                <ns0:tacacs>
+                  <ns0:source-interface>
+                    <ns0:Loopback annotation="!ip tacacs source-interface $TACACS_SERVER_INTERFACE">{{ aGrouping.TACACS_SERVER_INTERFACE | string() }}</ns0:Loopback>
+                  </ns0:source-interface>
+                </ns0:tacacs>
+              </ns0:ip>
+            </ns0:tacacsplus>
+          </ns0:server>
+        </ns0:group>
+        <ns0:authentication>
+          <ns0:login>
+            <ns0:name>default</ns0:name>
+            <ns0:group>TACACS-SERVERS</ns0:group>
+            <ns0:local />
+          </ns0:login>
+        </ns0:authentication>
+        <ns0:authorization>
+          <ns0:console />
+          <ns0:exec>
+            <ns0:name>default</ns0:name>
+            <ns0:group>TACACS-SERVERS</ns0:group>
+            <ns0:local />
+          </ns0:exec>
+        </ns0:authorization>
+      </ns0:aaa>
+    </ns0:native>
+  </config>
+</edit-config>

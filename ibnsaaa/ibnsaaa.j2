@@ -1,0 +1,27 @@
+!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA config for base Identity Based Networking
+!!! Vars: 
+!!! radius_group
+!!! radius_server
+!!! radius_server_ip
+!!! radius_auth_port
+!!! radius_acct_port
+!!! radius_key
+
+aaa authentication dot1x default group {{radius_group | str()}}
+aaa authorization network default group {{radius_group | str()}} local
+
+aaa accounting dot1x default start-stop group radius 
+!
+radius server {{radius_server | str()}}
+ address ipv4 {{radius_server_ip | ipaddr('address')}} auth-port {{radius_auth_port | default(1645) | str()}} acct-port {{radius_acct_port | default(1646) | str()}}
+ key {{radius_key | str()}}
+!
+radius-server retransmit 12
+!
+aaa group server radius {{radius_group | str()}}
+ server name {{radius_server | str()}}
+!
+aaa new-model
+aaa session-id common  

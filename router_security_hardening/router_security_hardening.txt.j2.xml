@@ -1,0 +1,36 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:service annotation="!! MACRO name router_security_hardening !! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, ISR4451X OS: !! Preconditions: !! Desc: Hardening network devices is an import aspect of ensuring network security. This Blueprint accomplishes that by disabling services that are not needed, tracking CPU and memory use, limiting the amount of time that one can be logged into the console, and more. !! Usage: clean !! Tags: security, hardening !! Vars: Only use &quot;_&quot; special characters in variable names">
+        <ns0:password-encryption />
+        <ns0:tcp-keepalives-in />
+        <ns0:tcp-keepalives-out />
+      </ns0:service>
+      <ns0:ip>
+        <ns0:http>
+          <ns0:server>false</ns0:server>
+        </ns0:http>
+      </ns0:ip>
+      <ns0:line>
+        <ns0:console annotation="&amp; snmp-server enable traps cpu threshold &amp; memory reserve console 4096 &amp; exception memory ignore overflow io &amp; exception memory ignore overflow processor">
+          <ns0:first>0</ns0:first>
+          <ns0:exec-timeout>
+            <ns0:minutes>10</ns0:minutes>
+            <ns0:seconds>0</ns0:seconds>
+          </ns0:exec-timeout>
+        </ns0:console>
+        <ns0:vty>
+          <ns0:first>0</ns0:first>
+          <ns0:last>4</ns0:last>
+          <ns0:exec-timeout>
+            <ns0:minutes>10</ns0:minutes>
+            <ns0:seconds>0</ns0:seconds>
+          </ns0:exec-timeout>
+        </ns0:vty>
+      </ns0:line>
+    </ns0:native>
+  </config>
+</edit-config>

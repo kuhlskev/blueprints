@@ -1,0 +1,174 @@
+<ootb-template>
+<template-metadata name="dhcp_server_voice_subnet">
+<template-details>
+<description> Cisco devices can act as DHCP Servers. This example shows how to configure DHCP and some standard parameters for a Voice subnet in a scope.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="dhcp_pool_name">
+<description>Descriptive name for the DHCP scope.</description>
+<html-component>textbox</html-component>
+<default-value label="">DHCP_Pool</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="dhcp_ipv4_network_address">
+<description>Network address for the DHCP IPv4 scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="dhcp_ipv4_network_subnet_mask">
+<description>Subnet mask of the network address for the DHCP IPv4 scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="default_gateway_ipv4_address">
+<description>Default gateway for the DHCP IPv4 scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="dns_server1_ipv4_address">
+<description>Primary DNS server for the DHCP scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="dns_server2_ipv4_address">
+<description>Secondary DNS server for the DHCP scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="dhcp_domain_name">
+<description>Domain name for the DHCP scope.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="dhcp_lease_time_in_days">
+<description>DHCP lease time in days for the scope.</description>
+<html-component>textbox</html-component>
+<default-value label="">9</default-value>
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="cucm_1_ipv4_address">
+<description>IPv4 address of the TFTP server within a CUCM cluster. Option 150 is used for Cisco phones to register to the call manager.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name dhcp_server_voice_subnet
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, Cat3750X, Cat3850, Cat3650 OS:
+!!! Preconditions:
+!!! Desc: Cisco devices can act as DHCP Servers. This example shows how to configure DHCP and some standard parameters for a Voice subnet in a scope.
+!!! Usage: clean
+!!! Tags: dhcp, options, pool, voice
+!!! Vars: Only use "_" special characters in variable names
+!!! $dhcp_pool_name: ; Descriptive name for the DHCP scope.
+!!! $dhcp_ipv4_network_address: ; Network address for the DHCP IPv4 scope.
+!!! $dhcp_ipv4_network_subnet_mask: ; Subnet mask of the network address for the DHCP IPv4 scope.
+!!! $default_gateway_ipv4_address: ; Default gateway for the DHCP IPv4 scope.
+!!! $dns_server1_ipv4_address: ; Primary DNS server for the DHCP scope.
+!!! $dns_server2_ipv4_address: ; Secondary DNS server for the DHCP scope.
+!!! $dhcp_domain_name: ; Domain name for the DHCP scope.
+!!! $dhcp_lease_time_in_days: ; DHCP lease time in days for the scope.
+!!! $cucm_1_ipv4_address: ; IPv4 address of the TFTP server within a CUCM cluster. Option 150 is used for Cisco phones to register to the call manager.
+
+service dhcp
+
+ip dhcp pool $dhcp_pool_name
+!!ip dhcp pool dhcp_pool_name
+ network $dhcp_ipv4_network_address $dhcp_ipv4_network_subnet_mask
+!! network dhcp_ipv4_network_address dhcp_ipv4_network_subnet_mask
+ default-router $default_gateway_ipv4_address
+!! default-router default_gateway_ipv4_address
+ dns-server $dns_server1_ipv4_address $dns_server2_ipv4_address
+!! dns-server dns_server1_ipv4_address dns_server2_ipv4_address
+ domain-name $dhcp_domain_name 
+!! domain-name dhcp_domain_name 
+ lease $dhcp_lease_time_in_days
+!! lease dhcp_lease_time_in_days
+ option 150 ip $cucm_1_ipv4_address
+!! option 150 ip cucm_1_ipv4_address
+</clicommand>
+</cli>
+</config>
+</ootb-template>

@@ -1,0 +1,28 @@
+<ootb-template>
+<template-metadata name="ibnsglobal">
+<template-details>
+<description>Auto-generated description for ibnsglobal</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+</param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA Global config for base Identity Based Networking
+!!! Vars: 
+
+dot1x system-auth-control</clicommand>
+</cli>
+</config>
+</ootb-template>

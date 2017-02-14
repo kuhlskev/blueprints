@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="pmacroname">
+        <template-details>
+            <description>This template is used ...</description>
+            <author>root</author><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="identity" isMandatory="true" name="Identity Commands">
+                <parameter name="globalmandatorystringtype">
+                    <description>Global string string variable</description>
+                    <html-component>textbox</html-component>
+                    <default-value/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>true</isGlobal>
+                    <help-description/>
+                    <syntax>
+                        <min/>
+                        <max/>
+                        <pattern/>
+                    </syntax>
+                </parameter>
+                <parameter name="globaloptionaldropdown">
+                    <description>Global optional drop-down box</description>
+                    <html-component>select</html-component>
+                    <default-value label="any">any</default-value>
+                    <default-value label="all">all</default-value>
+                    <default-value label="key">key</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>true</isGlobal>
+                    <help-description/>
+                    <syntax>
+                        <min/>
+                        <max/>
+                        <pattern/>
+                    </syntax>
+                </parameter>
+                <parameter name="globalmandatorynumber">
+                    <description>Global mandatory number</description>
+                    <html-component>textbox</html-component>
+                    <default-value>1700</default-value>
+                    <data-type>Integer</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>true</isGlobal>
+                    <help-description/>
+                    <syntax>
+                        <min>0</min>
+                        <max>65535</max>
+                        <pattern/>
+                    </syntax>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config platform="">
+        <device-filtering-details>
+            <family value="Switches and Hubs/Cisco Catalyst 6500 Series Switches">
+                <min-supported-imageversion value="12.2(33)SXI"/>
+            </family>
+            <family value="Cisco Interfaces and Modules/Cisco Services Modules/Cisco Catalyst 6500 Series SSL Services Module">
+                <min-supported-imageversion value="12.2(33)SXI"/>
+            </family>
+        </device-filtering-details>
+        <cli name="identity">
+            <clicommand>
+client ${ipaddress}
+server-key ${server-key}
+port ${port}
+auth-type ${authtype}
+	</clicommand>
+        </cli>
+    </config>
+</ootb-template>

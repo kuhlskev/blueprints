@@ -1,0 +1,141 @@
+<ootb-template>
+<template-metadata name="ibnsguestlwa">
+<template-details>
+<description>Auto-generated description for ibnsguestlwa</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="webauth_custom_policy">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">WebAuth_POLICY_CWA</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="webauth_policy">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">WebAuth_POLICY_CWA</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="webauth_ip">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="webauth_custom_map">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">LWA_WebAuth_Map_Custom</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="access_interface_type">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">GigabitEthernet</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="access_interface_index">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">1/0/1</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA config for Custom Webauth Policy for Identity Based Networking
+!!! Vars: 
+!!! webauth_policy
+!!! webauth_custom_policy
+!!! webauth_custom_map
+!!! webauth_ip
+!!! access_interface_type
+!!! access_interface_index
+
+policy-map type control subscriber $webauth_custom_policy
+!!policy-map type control subscriber webauth_custom_policy
+ event session-started match-all
+ 10 class always do-until-failure
+ 10 authenticate using webauth parameter-map LWA_WebAuth_Map_Custom
+policy-map type control subscriber $webauth_policy
+!!policy-map type control subscriber webauth_policy
+ event session-started match-all
+ 10 class always do-until-failure
+ 10 authenticate using webauth
+parameter-map type webauth global
+ type webauth
+ timeout init-state sec 3000
+ virtual-ip ipv4 $webauth_ip
+!! virtual-ip ipv4 webauth_ip
+parameter-map type webauth $webauth_custom_map
+!!parameter-map type webauth webauth_custom_map
+ type webauth
+ custom-page login device flash:web-login.html
+ custom-page success device flash:web-success.html
+ custom-page failure device flash:web-fail.html
+ custom-page login expired device flash:web-expired.html
+interface $access_interface_type$access_interface_index
+!!interface access_interface_typeaccess_interface_index
+ access-session port-control auto
+ service-policy type control subscriber $webauth_custom_policy
+!! service-policy type control subscriber webauth_custom_policy
+ service-policy type control subscriber $webauth_policy
+!! service-policy type control subscriber webauth_policy
+</clicommand>
+</cli>
+</config>
+</ootb-template>

@@ -1,0 +1,15 @@
+!!! Platform: Catalyst3850, Catalyst6k
+!!! OS: IOSXE, IOS
+!!! Desc: TrustSec access port configuration.
+!!! Vars: 
+!!! interface_name
+!!!
+
+interface {{interface_name| string()}}
+  ip access-group PreAuth in
+  authentication host-mode multi-domain
+  authentication open
+  authentication order dot1x mab
+  authentication port-control auto
+  mab
+  dot1x pae authenticator

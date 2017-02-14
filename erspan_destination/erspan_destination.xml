@@ -1,0 +1,99 @@
+<ootb-template>
+<template-metadata name="erspan_destination">
+<template-details>
+<description> ERSPAN is a feature which enables SPAN sessions to be extended over IP so that 2 remote locates can contain a source and destination pair. This way, the information one is trying to capture, and the tools being used to capture can be in different locations.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="monitor_session">
+<description>The value of the monitor session. Different platorms have differing numbers of maximum ERSPAN sessions that can be configured.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="destination_interface">
+<description>The source interface on which traffic is to be sent for ERSPAN</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="erspan_id">
+<description>The session ID for the ERSPAN. This session ID should be equal to the ID on the source side of the link.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="erspan_source_ipv4_address">
+<description>The IPv4 address of the source side of the ERSPAN.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name erspan_destination
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945 OS:
+!!! Preconditions:
+!!! Desc: ERSPAN is a feature which enables SPAN sessions to be extended over IP so that 2 remote locates can contain a source and destination pair. This way, the information one is trying to capture, and the tools being used to capture can be in different locations.
+!!! Usage: clean
+!!! Tags: erspan, security, debug
+!!! Vars: Only use "_" special characters in variable names
+!!! $monitor_session: ; The value of the monitor session. Different platorms have differing numbers of maximum ERSPAN sessions that can be configured.
+!!! $destination_interface: ; The source interface on which traffic is to be sent for ERSPAN
+!!! $erspan_id: ; The session ID for the ERSPAN. This session ID should be equal to the ID on the source side of the link.
+!!! $erspan_source_ipv4_address: ; The IPv4 address of the source side of the ERSPAN.
+
+! EXTRA
+monitor session $monitor_session type erspan-destination
+!!monitor session monitor_session type erspan-destination
+ destination interface $destination_interface
+!! destination interface destination_interface
+ source
+  erspan-id $erspan_id  
+!!  erspan-id erspan_id  
+  ip address $erspan_source_ipv4_address 
+!!  ip address erspan_source_ipv4_address 
+ no shutdown
+</clicommand>
+</cli>
+</config>
+</ootb-template>

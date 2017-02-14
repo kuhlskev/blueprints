@@ -1,0 +1,75 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:radius-server>
+        <ns0:dead-criteria>
+          <ns0:time>10</ns0:time>
+          <ns0:tries>1</ns0:tries>
+        </ns0:dead-criteria>
+        <ns0:deadtime>1</ns0:deadtime>
+      </ns0:radius-server>
+      <ns0:radius>
+        <ns0:server annotation="!radius server $radius_server">
+          <ns0:id>{{ ibnsguestaaaGrouping.radius_server | string() }}</ns0:id>
+          <ns0:key>
+            <ns0:key annotation="! address ipv4 $radius_server_ip auth-port $radious_auth_port acct-port $radious_acct_port &amp;  address ipv4 radius_server_ip auth-port radious_auth_port acct-port radious_acct_port">{{ ibnsguestaaaGrouping.radius_server_ip | ipaddr('address') }}</ns0:key>
+          </ns0:key>
+        </ns0:server>
+      </ns0:radius>
+      <ns0:aaa annotation="&amp; aaa local authentication default authorization default">
+        <ns0:new-model />
+        <ns0:group>
+          <ns0:server>
+            <ns0:radius annotation="!aaa group server radius $radius_group">
+              <ns0:name>{{ ibnsguestaaaGrouping.radius_group | string() }}</ns0:name>
+              <ns0:server>
+                <ns0:name annotation="! server name $radius_server">
+                  <ns0:name>{{ ibnsguestaaaGrouping.radius_server | string() }}</ns0:name>
+                </ns0:name>
+              </ns0:server>
+            </ns0:radius>
+          </ns0:server>
+        </ns0:group>
+        <ns0:authentication>
+          <ns0:dot1x>
+            <ns0:default>
+              <ns0:group annotation="!aaa authentication dot1x default group $radius_group">{{ ibnsguestaaaGrouping.radius_group | string() }}</ns0:group>
+            </ns0:default>
+          </ns0:dot1x>
+          <ns0:login annotation="!! Platform: Catalyst3850 !! OS: IOSXE 16.3.1 !! Desc: AAA config for Guest Identity Based Networking !! Vars: !! radius_group !! radius_server !! radius_server_ip !! radius_auth_port !! radius_acct_port !! radius_key">
+            <ns0:name>default</ns0:name>
+            <ns0:local />
+          </ns0:login>
+        </ns0:authentication>
+        <ns0:authorization>
+          <ns0:network>
+            <ns0:id>default</ns0:id>
+            <ns0:a1>
+              <ns0:group annotation="!aaa authorization network default group $radius_group local">{{ ibnsguestaaaGrouping.radius_group | string() }}</ns0:group>
+            </ns0:a1>
+            <ns0:a2>
+              <ns0:local />
+            </ns0:a2>
+          </ns0:network>
+        </ns0:authorization>
+        <ns0:server>
+          <ns0:radius>
+            <ns0:dynamic-author>
+              <ns0:client>
+                <ns0:ip>radius_server_ip</ns0:ip>
+                <ns0:server-key>
+                  <ns0:string annotation="! client $radius_server_ip server-key $radius_key">{{ ibnsguestaaaGrouping.radius_server_ip | ipaddr('address') }}</ns0:string>
+                </ns0:server-key>
+              </ns0:client>
+              <ns0:auth-type>any</ns0:auth-type>
+            </ns0:dynamic-author>
+          </ns0:radius>
+        </ns0:server>
+        <ns0:session-id>common</ns0:session-id>
+      </ns0:aaa>
+    </ns0:native>
+  </config>
+</edit-config>

@@ -1,0 +1,619 @@
+<ootb-template>
+<template-metadata name="3xxx_global_config">
+<template-details>
+<description> Best practice configuration for CAT 3K Global configuration!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="hostname">
+<description>Host-name of system (ASCII string only)</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="enable_password">
+<description>Enable password (must be set otherwise configuration rejected)</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="tacacs_servers_group">
+<description>Server group name</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radius_servers_group">
+<description>RADIUS server group name</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radius_server1">
+<description>Name of 1st (primary) RADIUS server in RADIUS server group</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="IP_radius_server1">
+<description>IP address of 1st (primary) RADIUS server in RADIUS server group</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="radius_server2">
+<description>Name of 2nd (secondary) RADIUS server in RADIUS server group</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="IP_radius_server2">
+<description>IP address of 2nd (secondary) RADIUS server in RADIUS server group</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="dns_server_name">
+<description>DNS server name (dont we need the IP) ?</description>
+<html-component>textbox</html-component>
+<default-value label="">CorpDNS </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="domain_name">
+<description>Domain name of system</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="vtp_domain">
+<description>VLAN Trunking Protocol (VTP) domain name</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="config_change_log_size">
+<description>Size of config change log (lines)</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="local_user">
+<description>Login ID of system</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="log_buffer_size">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">666</default-value>
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="tacacs_server1">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="dns_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="local_user_password">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="snmp_acl_name">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="IP_APIC_EM_Servers">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="IP_PI_Servers">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="IP_SNMP_Servers">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="IP_DNS">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="IP_SYSLOG_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="ro_community_string">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="rw_community">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="tacacs_server1_IP">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="tacacs_server_key">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="radius_key">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="prefered_ntp_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="secondary_ntp_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Routers">
+<min-supported-imageversion value="15.5" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name 3xxx_global_config
+!!! Platform: Routers, OS: 15.5
+!!! Preconditions:
+!!! Desc: Best practice configuration for CAT 3K Global configuration
+!!! Usage: clean
+!!! Tags: tag_1, tag2
+!!! Vars: Only use "_" special characters in variable names
+!!! $hostname: system ; Host-name of system (ASCII string only)
+!!! $enable_password: cisco ; Enable password (must be set otherwise configuration rejected)
+!!! $tacacs_servers_group: TACACS ; Server group name
+!!! $radius_servers_group: RADIUS ; RADIUS server group name
+!!! $radius_server1: RADIUS1 ; Name of 1st (primary) RADIUS server in RADIUS server group
+!!! $IP_radius_server1:  10.10.1.1 ; IP address of 1st (primary) RADIUS server in RADIUS server group
+!!! $radius_server2: RADIUS2 ; Name of 2nd (secondary) RADIUS server in RADIUS server group
+!!! $IP_radius_server2: 10.10.1.2 ; IP address of 2nd (secondary) RADIUS server in RADIUS server group
+!!! $dns_server_name: CorpDNS ; DNS server name (dont we need the IP) ?
+!!! $domain_name: www.cisco.com ; Domain name of system
+!!! $vtp_domain: CorpVLANS ; VLAN Trunking Protocol (VTP) domain name
+!!! $config_change_log_size: 1000 ; Size of config change log (lines)
+!!! $local_user: cisco ; Login ID of system
+
+! Catalyst 3XXX Global Config ver1.0
+
+service tcp-keepalives-in
+service timestamps debug datetime msec show-timezone
+service timestamps log datetime msec show-timezone
+service password-encryption
+service compress-config
+service sequence-numbers
+!
+hostname $hostname
+!!hostname hostname
+!
+logging buffered $log_buffer_size
+!!logging buffered log_buffer_size
+!
+no logging console
+no logging monitor
+enable secret 0 $enable_password
+!!enable secret 0 enable_password
+!
+aaa new-model
+!
+aaa group server tacacs+ $tacacs_servers_group
+!!aaa group server tacacs+ tacacs_servers_group
+ server name $tacacs_server1
+!! server name tacacs_server1
+ ip tacacs source-interface Loopback0
+!
+aaa group server radius $radius_servers_group
+!!aaa group server radius radius_servers_group
+ server name $radius_server1
+!! server name radius_server1
+ server name $radius_server2
+!! server name radius_server2
+ ip radius source-interface Loopback0
+!
+aaa authentication login default group $tacacs_servers_group local
+!!aaa authentication login default group tacacs_servers_group local
+aaa authentication dot1x default group $radius_servers_group
+!!aaa authentication dot1x default group radius_servers_group
+aaa authorization console
+aaa authorization exec default group $tacacs_servers_group local
+!!aaa authorization exec default group tacacs_servers_group local
+aaa authorization configuration default group $radius_servers_group 
+!!aaa authorization configuration default group radius_servers_group 
+aaa accounting update newinfo periodic 2880
+aaa accounting dot1x default start-stop group $radius_servers_group
+!!aaa accounting dot1x default start-stop group radius_servers_group
+!
+aaa server radius dynamic-author
+ client $IP_radius_server1 server-key  0 c1sco123
+!! client IP_radius_server1 server-key  0 c1sco123
+ client $IP_radius_server2 server-key  0 c1sco123
+!! client IP_radius_server2 server-key  0 c1sco123
+! 
+aaa session-id common
+device-sensor accounting
+!
+!
+ip routing
+!
+ip name-server $dns_server
+!!ip name-server dns_server
+!
+ip domain name $domain_name
+!!ip domain name domain_name
+!
+vtp domain $vtp_domain
+!!vtp domain vtp_domain
+vtp mode transparent
+!
+errdisable recovery cause all
+system mtu 9100
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+archive
+ log config
+  logging enable
+  logging size $config_change_log_size
+!!  logging size config_change_log_size
+  notify syslog contenttype plaintext
+  hidekeys
+!
+username $local_user privilege 15 secret 0 $local_user_password
+!!username local_user privilege 15 secret 0 local_user_password
+
+ip ssh source-interface Loopback0
+ip ssh version 2
+ip scp server enable
+
+no ip http server 
+no ip http secure-server 
+ip http secure-active-session-modules none
+ip http active-session-modules none
+
+no ip access-list standard $snmp_acl_name
+!!no ip access-list standard snmp_acl_name
+ip access-list standard $snmp_acl_name     ! revisit as more IPs than vars
+!!ip access-list standard snmp_acl_name     ! revisit as more IPs than vars
+ permit $IP_APIC_EM_Servers
+!! permit IP_APIC_EM_Servers
+ permit $IP_PI_Servers
+!! permit IP_PI_Servers
+ permit $IP_SNMP_Servers
+!! permit IP_SNMP_Servers
+
+ip access-list extended ACL-DEFAULT
+ permit udp any any eq domain
+ permit udp any eq bootpc any eq bootps
+ deny   ip any any
+
+ip access-list extended ACL_Pre_Auth
+ permit ip any host $IP_DNS
+!! permit ip any host IP_DNS
+ permit udp any eq bootpc any eq bootps
+ permit udp any any eq domain
+ permit udp any any eq tftp
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ deny   ip any any
+
+ip access-list extended ACL_WEBAUTH_REDIRECT
+ permit tcp any any eq www
+ permit tcp any any eq 443
+ip access-list extended BLACKHOLE
+ permit tcp any any eq www
+ permit tcp any any eq 443
+!
+logging snmp-trap emergencies
+logging snmp-trap alerts
+logging snmp-trap critical
+logging snmp-trap errors
+logging snmp-trap warnings
+logging snmp-trap informational
+logging source-interface Loopback0
+logging host $IP_SYSLOG_server
+!!logging host IP_SYSLOG_server
+logging trap informational 
+logging buffered 1000000 debugging
+!
+snmp-server community $ro_community_string RO $snmp_acl_name
+!!snmp-server community ro_community_string RO snmp_acl_name
+snmp-server community $rw_community RW $snmp_acl_name
+!!snmp-server community rw_community RW snmp_acl_name
+
+tacacs server $tacacs_server1
+!!tacacs server tacacs_server1
+ address ipv4 $tacacs_server1_IP
+!! address ipv4 tacacs_server1_IP
+ key $tacacs_server_key
+!! key tacacs_server_key
+
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+!
+radius server $radius_server1
+!!radius server radius_server1
+ address ipv4 $IP_radius_server1 auth-port 1812 acct-port 1813
+!! address ipv4 IP_radius_server1 auth-port 1812 acct-port 1813
+ key  0 $radius_key
+!! key  0 radius_key
+!
+radius server $radius_server2
+!!radius server radius_server2
+ address ipv4 $IP_radius_server2 auth-port 1812 acct-port 1813
+!! address ipv4 IP_radius_server2 auth-port 1812 acct-port 1813
+ key  0 $radius_key
+!! key  0 radius_key
+ 
+
+configuration mode exclusive
+!
+line vty 0 16
+ transport input ssh
+ transport output ssh
+!
+ntp server $prefered_ntp_server prefer
+!!ntp server prefered_ntp_server prefer
+ntp server $secondary_ntp_server
+!!ntp server secondary_ntp_server
+!!!@
+</clicommand>
+</cli>
+</config>
+</ootb-template>

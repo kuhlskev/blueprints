@@ -1,0 +1,15 @@
+!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA Interface config for base Identity Based Networking
+!!! Vars: 
+!!! access_interface_type
+!!! access_interface_index
+
+interface {{access_interface_type | default('GigabitEthernet') | string()}}{{access_interface_index | default('1/0/1') | string()}}
+ authentication host-mode multi-domain
+ authentication order dot1x mab webauth
+ authentication port-control auto
+ authentication periodic
+ authentication timer reauthenticate server
+ mab
+ dot1x pae authenticator

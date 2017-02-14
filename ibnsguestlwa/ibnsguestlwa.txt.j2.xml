@@ -1,0 +1,24 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:parameter-map annotation="!! Platform: Catalyst3850 !! OS: IOSXE 16.3.1 !! Desc: AAA config for Custom Webauth Policy for Identity Based Networking !! Vars: !! webauth_policy !! webauth_custom_policy !! webauth_custom_map !! webauth_ip !! access_interface_type !! access_interface_index !policy-map type control subscriber $webauth_custom_policy &amp; policy-map type control subscriber webauth_custom_policy &amp;  event session-started match-all &amp;  10 class always do-until-failure &amp;  10 authenticate using webauth parameter-map LWA_WebAuth_Map_Custom !policy-map type control subscriber $webauth_policy &amp; policy-map type control subscriber webauth_policy &amp;  event session-started match-all &amp;  10 class always do-until-failure &amp;  10 authenticate using webauth">
+        <ns0:name>{{ ibnsguestlwaGrouping.webauth_policy | string() }}</ns0:name>
+        <ns0:type>webauth</ns0:type>
+        <ns0:webauth />
+        <ns0:timeout>
+          <ns0:init-state>
+            <ns0:sec annotation="&amp;  type webauth">3000</ns0:sec>
+          </ns0:init-state>
+        </ns0:timeout>
+      </ns0:parameter-map>
+      <ns0:parameter-map annotation="! virtual-ip ipv4 $webauth_ip &amp;  virtual-ip ipv4 webauth_ip !parameter-map type webauth $webauth_custom_map">
+        <ns0:name>{{ ibnsguestlwaGrouping.webauth_custom_map | string() }}</ns0:name>
+        <ns0:type>webauth</ns0:type>
+        <ns0:webauth />
+      </ns0:parameter-map>
+    </ns0:native>
+  </config>
+</edit-config>

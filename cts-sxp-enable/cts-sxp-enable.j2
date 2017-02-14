@@ -1,0 +1,11 @@
+!!! Platform: Catalyst3850, Catalyst6k
+!!! OS: IOSXE, IOS
+!!! Desc: Configure SXP on IOS Devices. This will help propegate Cisco TrustSec inline tagging.
+!!! Vars: 
+!!! sxp_source_address
+!!! sxp_password
+!!!
+
+cts sxp enable
+cts sxp default source-ip {{ sxp_source_address| string() }}
+cts sxp default password {{ sxp_password | string()}}

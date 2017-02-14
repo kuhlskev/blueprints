@@ -1,0 +1,51 @@
+<ootb-template>
+<template-metadata name="cts-identity-wired-access-port">
+<template-details>
+<description>Auto-generated description for cts-identity-wired-access-port</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="interface_name">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Catalyst3850, Catalyst6k
+!!! OS: IOSXE, IOS
+!!! Desc: TrustSec access port configuration.
+!!! Vars: 
+!!! interface_name
+!!!
+
+interface $interface_name
+!!interface interface_name
+  ip access-group PreAuth in
+  authentication host-mode multi-domain
+  authentication open
+  authentication order dot1x mab
+  authentication port-control auto
+  mab
+  dot1x pae authenticator</clicommand>
+</cli>
+</config>
+</ootb-template>

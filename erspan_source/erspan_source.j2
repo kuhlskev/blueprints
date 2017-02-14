@@ -1,0 +1,22 @@
+!!! MACRO name erspan_source
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945 OS:
+!!! Preconditions:
+!!! Desc: ERSPAN is a feature which enables SPAN sessions to be extended over IP so that 2 remote locates can contain a source and destination pair. This way, the information one is trying to capture, and the tools being used to capture can be in different locations.
+!!! Usage: clean
+!!! Tags: erspan, security, debug
+!!! Vars: Only use "_" special characters in variable names
+!!! $monitor_session: ; The value of the monitor session. Different platorms have differing numbers of maximum ERSPAN sessions that can be configured.
+!!! $source_interface: ; The source interface on which traffic is to be collected for ERSPAN
+!!! $erspan_id: ; The session ID for the ERSPAN. This session ID should be equal to the ID on the destination side of the link.
+!!! $erspan_destination_ipv4_address: ; The IPv4 address of the destination side of the ERSPAN.
+!!! $erspan_source_ipv4_address: ; The IPv4 address of the source side of the ERSPAN. This should be an IP address local to the device on which this is being configured.
+
+! EXTRA
+no monitor session {{ monitor_session| int() }}
+monitor session {{ monitor_session| int() }} type erspan-source
+ source interface {{ source_interface| string() }}
+ destination
+  erspan-id {{ erspan_id| string() }}
+  ip address {{ erspan_destination_ipv4_address| ipaddr('address') }}
+  origin ip address {{ erspan_source_ipv4_address| ipaddr('address') }}
+ no shutdown

@@ -1,0 +1,87 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:flow>
+        <ns0:record annotation="!! Platform: ISR4451, ISR4431, ISR4321 !! OS: IOSXE !! Desc: Flow record configuration appropriate for collection data about IWAN. !! Vars: !!">
+          <ns0:name>Record-FNF-IWAN</ns0:name>
+          <ns0:collect>
+            <ns0:application>
+              <ns0:name />
+            </ns0:application>
+            <ns0:counter>
+              <ns0:bytes />
+              <ns0:packets />
+            </ns0:counter>
+            <ns0:flow>
+              <ns0:sampler />
+            </ns0:flow>
+            <ns0:interface>
+              <ns0:output />
+            </ns0:interface>
+            <ns0:ipv4>
+              <ns0:destination>
+                <ns0:mask />
+              </ns0:destination>
+              <ns0:dscp />
+              <ns0:id />
+              <ns0:source>
+                <ns0:mask />
+                <ns0:prefix />
+              </ns0:source>
+            </ns0:ipv4>
+            <ns0:routing>
+              <ns0:destination>
+                <ns0:as />
+              </ns0:destination>
+              <ns0:next-hop>
+                <ns0:address>
+                  <ns0:ipv4 />
+                </ns0:address>
+              </ns0:next-hop>
+              <ns0:source>
+                <ns0:as />
+              </ns0:source>
+            </ns0:routing>
+            <ns0:timestamp>
+              <ns0:sys-uptime>
+                <ns0:first />
+                <ns0:last />
+              </ns0:sys-uptime>
+            </ns0:timestamp>
+            <ns0:transport>
+              <ns0:tcp>
+                <ns0:flags />
+              </ns0:tcp>
+            </ns0:transport>
+          </ns0:collect>
+          <ns0:description>Flexible NetFlow for IWAN Monitoring</ns0:description>
+          <ns0:match>
+            <ns0:flow>
+              <ns0:direction />
+            </ns0:flow>
+            <ns0:interface>
+              <ns0:input />
+            </ns0:interface>
+            <ns0:ipv4>
+              <ns0:destination>
+                <ns0:address />
+              </ns0:destination>
+              <ns0:protocol />
+              <ns0:source>
+                <ns0:address />
+              </ns0:source>
+              <ns0:tos />
+            </ns0:ipv4>
+            <ns0:transport>
+              <ns0:destination-port />
+              <ns0:source-port />
+            </ns0:transport>
+          </ns0:match>
+        </ns0:record>
+      </ns0:flow>
+    </ns0:native>
+  </config>
+</edit-config>

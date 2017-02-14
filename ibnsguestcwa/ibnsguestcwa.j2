@@ -1,0 +1,26 @@
+!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA Interface config for Webauth Policy for Identity Based Networking
+!!! Vars: 
+!!! webauth_policy
+!!! webauth_acl
+!!! webauth_deny_hosts
+!!! access_interface_type
+!!! access_interface_index
+
+
+
+policy-map type control subscriber {{webauth_policy | default('WebAuth_POLICY_CWA') | str()}}
+ event session-started match-all
+ 10 class always do-until-failure
+ 10 authenticate using mab
+ip access-list extended {{webauth_acl | default('My_CWA_Redirect_ACL') | str()}}
+ permit tcp any any eq www
+ permit tcp any any eq 443
+ deny ip any host {{webauth_deny_hosts | | ipaddr('address')}}
+!
+interface {{access_interface_type | default('GigabitEthernet') | str()}}{{access_interface_index | default('1/0/1') | str()}}
+ access-session port-control auto
+ mab
+ dot1x pae authenticator
+ service-policy type control subscriber {{webauth_policy | default('WebAuth_POLICY_CWA') | str()}}

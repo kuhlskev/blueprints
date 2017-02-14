@@ -1,0 +1,120 @@
+<ootb-template>
+<template-metadata name="flow-export-prime">
+<template-details>
+<description>Auto-generated description for flow-export-prime</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="flow_collector_ipv4">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="netflow_source_interface">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">Loopback0</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="flow_monitor_interface">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: ISR4451, ISR4431, ISR4321 
+!!! OS: IOSXE
+!!! Desc: Flow record, exporter, and monitor configuration for Prime Infrastructure. This configuration contains only the flow records that Prime Infrastructure can use.
+!!! Vars: 
+!!! flow_collector_ipv4
+!!! netflow_source_interface
+!!! flow_monitor_interface
+!!!
+
+flow record Record-FNF-IWAN
+  description Flexible NetFlow for IWAN Monitoring
+  match flow direction
+  match interface input
+  match ipv4 destination address
+  match ipv4 protocol
+  match ipv4 source address
+  match ipv4 tos
+  match transport destination-port
+  match transport source-port
+  collect application name
+  collect counter bytes
+  collect counter packets
+  collect flow sampler
+  collect interface output
+  collect ipv4 destination mask
+  collect ipv4 dscp
+  collect ipv4 id
+  collect ipv4 source mask
+  collect ipv4 source prefix
+  collect routing destination as
+  collect routing next-hop address ipv4
+  collect routing source as
+  collect timestamp sys-uptime first
+  collect timestamp sys-uptime last
+  collect transport tcp flags
+!
+flow exporter Export-FNF-Monitor-Prime
+  description FNFv9 NBAR2 with Prime 3.1
+  destination $flow_collector_ipv4
+!!  destination flow_collector_ipv4
+  source $netflow_source_interface
+!!  source netflow_source_interface
+  transport udp 9991
+  template data timeout 600
+  option interface-table
+  option application-table
+  option application-attributes
+!
+flow monitor Monitor-FNF-IWAN
+  description IWAN Traffic Analysis 
+  record Record-FNF-IWAN
+  exporter Export-FNF-Monitor-Prime
+  cache timeout active 60
+  cache timeout inactive 10
+!
+interface $flow_monitor_interface
+!!interface flow_monitor_interface
+  ip flow monitor Monitor-FNF-IWAN input
+  ip flow monitor Monitor-FNF-IWAN output</clicommand>
+</cli>
+</config>
+</ootb-template>

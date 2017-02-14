@@ -1,0 +1,104 @@
+<ootb-template>
+<template-metadata name="TACACS_for_Device_Administration_with_ISE">
+<template-details>
+<description> TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="interface_type">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="int_id">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="hsrp_index">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">666</default-value>
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="dhcp_server">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">127.0.0.0</default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="hsrp_key">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">AnyStringValue</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name TACACS_for_Device_Administration_with_ISE
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1
+!!! Preconditions:
+!!! Desc: TACACS+ is the primary protocol used to authenticate management logins on the infrastructure devices to the AAA server. A local AAA user database is also defined on each network infrastructure device to provide a fallback authentication source in case the centralized TACACS+ server is unavailable.
+!!! Usage: clean
+
+interface $interface_type $int_id
+!!interface interface_type int_id
+ standby version 2
+ standby $hsrp_index ip $dhcp_server
+!! standby hsrp_index ip dhcp_server
+ standby $hsrp_index preempt
+!! standby hsrp_index preempt
+ standby $hsrp_index authentication md5 key-string $hsrp_key
+!! standby hsrp_index authentication md5 key-string hsrp_key
+</clicommand>
+</cli>
+</config>
+</ootb-template>

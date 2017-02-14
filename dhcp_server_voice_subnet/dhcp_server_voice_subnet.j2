@@ -1,0 +1,26 @@
+!!! MACRO name dhcp_server_voice_subnet
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, Cat3750X, Cat3850, Cat3650 OS:
+!!! Preconditions:
+!!! Desc: Cisco devices can act as DHCP Servers. This example shows how to configure DHCP and some standard parameters for a Voice subnet in a scope.
+!!! Usage: clean
+!!! Tags: dhcp, options, pool, voice
+!!! Vars: Only use "_" special characters in variable names
+!!! $dhcp_pool_name: ; Descriptive name for the DHCP scope.
+!!! $dhcp_ipv4_network_address: ; Network address for the DHCP IPv4 scope.
+!!! $dhcp_ipv4_network_subnet_mask: ; Subnet mask of the network address for the DHCP IPv4 scope.
+!!! $default_gateway_ipv4_address: ; Default gateway for the DHCP IPv4 scope.
+!!! $dns_server1_ipv4_address: ; Primary DNS server for the DHCP scope.
+!!! $dns_server2_ipv4_address: ; Secondary DNS server for the DHCP scope.
+!!! $dhcp_domain_name: ; Domain name for the DHCP scope.
+!!! $dhcp_lease_time_in_days: ; DHCP lease time in days for the scope.
+!!! $cucm_1_ipv4_address: ; IPv4 address of the TFTP server within a CUCM cluster. Option 150 is used for Cisco phones to register to the call manager.
+
+service dhcp
+
+ip dhcp pool {{ dhcp_pool_name| default("DHCP_Pool")| string() }}
+ network {{ dhcp_ipv4_network_address| ipaddr('address') }} {{ dhcp_ipv4_network_subnet_mask| ipaddr('address') }}
+ default-router {{ default_gateway_ipv4_address| ipaddr('address') }}
+ dns-server {{ dns_server1_ipv4_address| ipaddr('address') }} {{ dns_server2_ipv4_address| ipaddr('address') }}
+ domain-name {{ dhcp_domain_name| string() }} 
+ lease {{ dhcp_lease_time_in_days| default(9)| int() }}
+ option 150 ip {{ cucm_1_ipv4_address| ipaddr('address') }}

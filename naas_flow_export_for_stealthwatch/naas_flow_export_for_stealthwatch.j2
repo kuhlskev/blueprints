@@ -1,0 +1,36 @@
+!!! MACRO name naas_flow_export_for_stealthwatch
+!!! Platform: Cat3850, Cat2960X, Cat4500 OS:
+!!! Preconditions:
+!!! Desc: The Network as a Sensor solution utilizes Netflow v9 (Flexible NetFlow) in order to export metadata about the flows traversing the network to a product called Stealthwatch. Using this metadata, Stealtchwatch can detech annomilies on your network and catch attacks as they are occuring. This is utilized for the incoming direction.
+!!! Usage: clean
+!!! Tags: stealthwatch, naas, flow, fnf, netflow, security
+!!! Vars: Only use "_" special characters in variable names
+!!! $stealtchwatch_ipv4_address: ; The IPv4 address of the Stealthwatch server that the Netflow is being exported to.
+
+flow record FLOW-RECORD1-IN
+ match datalink mac source address input
+ match datalink mac destination address input 
+ match ipv4 tos
+ match ipv4 ttl
+ match ipv4 protocol 
+ match ipv4 source address
+ match ipv4 destination address
+ match transport source-port
+ match transport destination-port
+ match interface input
+ match flow direction
+ match flow cts source group-tag
+ match flow cts destination group-tag
+ collect counter bytes long
+ collect counter packets long
+ collect timestamp absolute  rst
+ collect timestamp absolute last
+
+flow exporter FLOW-COLLECTOR1
+ destination {{ stealtchwatch_ipv4_address| ipaddr('address') }}
+ transport udp 2055
+
+flow monitor FLOW-MONITOR1-IN 
+ exporter FLOW-COLLECTOR1
+ cache timeout active 60
+  record FLOW-RECORD1-IN

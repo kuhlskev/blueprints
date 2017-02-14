@@ -1,0 +1,140 @@
+<ootb-template>
+<template-metadata name="conference_bridge_registration_to_cucm">
+<template-details>
+<description> All routers need a minimum of a packet voice digital signal processor (DSP) module (PVDM3-64) in order to create five 8-party conference bridge resources along with the DSPs needed for voice gateway services. If your organization needs more conference resources, you will need additional DSPs. The router requires additional DSPs and configuration if hardware- based transcoding is needed. By default, calls to Cisco Unity Connection are transcoded in the server. The router at the main site can provide unified communications gateway functions. Therefore, it should be configured with sufficient DSPs and a T1/ E1 voice/WAN interface card (VWIC) for the PSTN primary rate interface (PRI) configurations. The Cisco 3945 and 3925 Integrated Services Routers with voice security (VSEC) ship with a PVDM3-64, so they have enough DSPs to handle one voice T1 and five 8-party conferences. If the remote site uses E1, they will have enough DSPs for only four 8-party conferences. The Cisco 2911 Integrated Services Router (ISR) with VSEC ships with a PVDM3-16, and the 2921 ISR with VSEC and 2951 ISR with VSEC ship with a PVDM3-32. The Cisco 2900 Series ISRs have to be upgraded to a single PVDM3-64 DSP in order to allow sufficient resources for a single voice T1 and at least five 8-party conferences. Apply the following configuration in the HQ router in order to register the five conference-bridge resources as the highest priority on the subscriber and as the second priority on the publisher. The same configuration is used in the remote-site routers if conferencing resources are needed.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="maximum_sessions">
+<description>Maximum sessions allowed on the conference bridge. This will depend on the amount of DSP resources availible.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="sccp_source_interface">
+<description>This is the interface from which SCCP messages are sourced. This is usually a Loopback.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="cucm_1_ipv4_address">
+<description>The IPv4 address of the primary CUCM used for conference bridge registration in a cluster. This is where the SCCP based conference bridge will register.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="cucm_2_ipv4_address">
+<description>The IPv4 address of the secondary CUCM used for conference bridge registration in a cluster. This is where the SCCP based conference bridge will register.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="conference_bridge_registration_name">
+<description>The descriptive name used to register to CUCM. This name will appear, with the assigned domain name, on CUCM once the converence bridge has succesfully registered.</description>
+<html-component>textbox</html-component>
+<default-value label="" />
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name conference_bridge_registration_to_cucm
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, OS:
+!!! Preconditions:
+!!! Desc: All routers need a minimum of a packet voice digital signal processor (DSP) module (PVDM3-64) in order to create five 8-party conference bridge resources along with the DSPs needed for voice gateway services. If your organization needs more conference resources, you will need additional DSPs. The router requires additional DSPs and configuration if hardware- based transcoding is needed. By default, calls to Cisco Unity Connection are transcoded in the server. The router at the main site can provide unified communications gateway functions. Therefore, it should be configured with sufficient DSPs and a T1/ E1 voice/WAN interface card (VWIC) for the PSTN primary rate interface (PRI) configurations. The Cisco 3945 and 3925 Integrated Services Routers with voice security (VSEC) ship with a PVDM3-64, so they have enough DSPs to handle one voice T1 and five 8-party conferences. If the remote site uses E1, they will have enough DSPs for only four 8-party conferences. The Cisco 2911 Integrated Services Router (ISR) with VSEC ships with a PVDM3-16, and the 2921 ISR with VSEC and 2951 ISR with VSEC ship with a PVDM3-32. The Cisco 2900 Series ISRs have to be upgraded to a single PVDM3-64 DSP in order to allow sufficient resources for a single voice T1 and at least five 8-party conferences. Apply the following configuration in the HQ router in order to register the five conference-bridge resources as the highest priority on the subscriber and as the second priority on the publisher. The same configuration is used in the remote-site routers if conferencing resources are needed.
+!!! Usage: clean
+!!! Tags: voice, cucm, conference, dsp
+!!! Vars: Only use "_" special characters in variable names
+!!! $maximum_sessions: ; Maximum sessions allowed on the conference bridge. This will depend on the amount of DSP resources availible.
+!!! $sccp_source_interface: ; This is the interface from which SCCP messages are sourced. This is usually a Loopback.
+!!! $cucm_1_ipv4_address: ; The IPv4 address of the primary CUCM used for conference bridge registration in a cluster. This is where the SCCP based conference bridge will register.
+!!! $cucm_2_ipv4_address: ; The IPv4 address of the secondary CUCM used for conference bridge registration in a cluster. This is where the SCCP based conference bridge will register.
+!!! $conference_bridge_registration_name: ; The descriptive name used to register to CUCM. This name will appear, with the assigned domain name, on CUCM once the converence bridge has succesfully registered.
+
+voice-card 0
+  dspfarm
+  dsp services dspfarm
+
+dspfarm profile 1 conference 
+  description HQ Conference Bridges 
+  codec g711ulaw
+  codec g711alaw
+  codec g729ar8
+  codec g729abr8
+  codec g729r8
+  codec g729br8
+  codec g722-64
+  codec ilbc
+  maximum sessions $maximum_sessions
+!!  maximum sessions maximum_sessions
+  associate application SCCP
+  no shutdown
+
+ccm-manager sccp local $sccp_source_interface
+!!ccm-manager sccp local sccp_source_interface
+
+sccp local $sccp_source_interface
+!!sccp local sccp_source_interface
+sccp ccm $cucm_1_ipv4_address identifier 1 priority 1 version 7.0 
+!!sccp ccm cucm_1_ipv4_address identifier 1 priority 1 version 7.0 
+sccp ccm $cucm_2_ipv4_address identifier 2 priority 2 version 7.0 
+!!sccp ccm cucm_2_ipv4_address identifier 2 priority 2 version 7.0 
+sccp
+
+sccp ccm group 1
+  bind interface $sccp_source_interface
+!!  bind interface sccp_source_interface
+  associate ccm 1 priority 1 
+  associate ccm 2 priority 2 
+  associate profile 1 register $conference_bridge_registration_name
+!!  associate profile 1 register conference_bridge_registration_name
+  switchback method graceful 
+  switchback interval 60</clicommand>
+</cli>
+</config>
+</ootb-template>

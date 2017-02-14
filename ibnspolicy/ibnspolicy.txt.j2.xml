@@ -1,0 +1,10 @@
+<edit-config xmlns:ns0="urn:ietf:params:xml:ns:netconf:base:1.0">
+	<target>
+		<running />
+	</target>
+<config>
+version="1.0" encoding="UTF-8"?&gt;
+<ns0:rpc-reply message-id="1">
+  <ns0:data />
+</ns0:rpc-reply></config>
+</edit-config>

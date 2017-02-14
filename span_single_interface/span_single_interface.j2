@@ -1,0 +1,15 @@
+!!! MACRO name span_single_interface
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, Cat3750X, Cat3850, Cat2960X, Cat3650, Cat3560 OS:
+!!! Preconditions:
+!!! Desc: The SPAN feature on Cisco devices enables traffic on a specific interface, vlan, and other logical network elements to be replicated to another port so that monitoring software, diagnostic tools, and others devices can read this copied traffic for security or debugging purposes.
+!!! Usage: clean
+!!! Tags: span, security, debug
+!!! Vars: Only use "_" special characters in variable names
+!!! $monitor_session: ; The value of the monitor session. Different platorms have differing numbers of maximum SPAN sessions that can be configured.
+!!! $source_interface: ; The source interface on which traffic is to be collected for SPAN
+!!! $destination_interface: ; The destination interface on which traffic will be copied to, from the source interface, so that sercurity and diagnostic tools can be attached to do their work.
+
+! EXTRA
+no monitor session {{ monitor_session| int() }}
+monitor session {{ monitor_session| int() }} source interface {{ source_interface| string() }}
+monitor session {{ monitor_session| int() }} destination interface {{ destination_interface| string() }} encapsulation dot1q

@@ -1,0 +1,165 @@
+!!! MACRO name 3xxx_global_config
+!!! Platform: Routers, OS: 15.5
+!!! Preconditions:
+!!! Desc: Best practice configuration for CAT 3K Global configuration
+!!! Usage: clean
+!!! Tags: tag_1, tag2
+!!! Vars: Only use "_" special characters in variable names
+!!! $hostname: system ; Host-name of system (ASCII string only)
+!!! $enable_password: cisco ; Enable password (must be set otherwise configuration rejected)
+!!! $tacacs_servers_group: TACACS ; Server group name
+!!! $radius_servers_group: RADIUS ; RADIUS server group name
+!!! $radius_server1: RADIUS1 ; Name of 1st (primary) RADIUS server in RADIUS server group
+!!! $IP_radius_server1:  10.10.1.1 ; IP address of 1st (primary) RADIUS server in RADIUS server group
+!!! $radius_server2: RADIUS2 ; Name of 2nd (secondary) RADIUS server in RADIUS server group
+!!! $IP_radius_server2: 10.10.1.2 ; IP address of 2nd (secondary) RADIUS server in RADIUS server group
+!!! $dns_server_name: CorpDNS ; DNS server name (dont we need the IP) ?
+!!! $domain_name: www.cisco.com ; Domain name of system
+!!! $vtp_domain: CorpVLANS ; VLAN Trunking Protocol (VTP) domain name
+!!! $config_change_log_size: 1000 ; Size of config change log (lines)
+!!! $local_user: cisco ; Login ID of system
+
+! Catalyst 3XXX Global Config ver1.0
+
+service tcp-keepalives-in
+service timestamps debug datetime msec show-timezone
+service timestamps log datetime msec show-timezone
+service password-encryption
+service compress-config
+service sequence-numbers
+!
+hostname {{ hostname| string() }}
+!
+logging buffered {{ log_buffer_size| int() }}
+!
+no logging console
+no logging monitor
+enable secret 0 {{ enable_password| string() }}
+!
+aaa new-model
+!
+aaa group server tacacs+ {{ tacacs_servers_group| string() }}
+ server name {{ tacacs_server1| default("TACACS1")| string() }}
+ ip tacacs source-interface Loopback0
+!
+aaa group server radius {{ radius_servers_group| string() }}
+ server name {{ radius_server1| string() }}
+ server name {{ radius_server2| string() }}
+ ip radius source-interface Loopback0
+!
+aaa authentication login default group {{ tacacs_servers_group| string() }} local
+aaa authentication dot1x default group {{ radius_servers_group| string() }}
+aaa authorization console
+aaa authorization exec default group {{ tacacs_servers_group| string() }} local
+aaa authorization configuration default group {{ radius_servers_group| string() }} 
+aaa accounting update newinfo periodic 2880
+aaa accounting dot1x default start-stop group {{ radius_servers_group| string()}}
+!
+aaa server radius dynamic-author
+ client {{ IP_radius_server1| ipaddr('address') }} server-key  0 c1sco123
+ client {{ IP_radius_server2| ipaddr('address') }} server-key  0 c1sco123
+! 
+aaa session-id common
+device-sensor accounting
+!
+!
+ip routing
+!
+ip name-server {{ dns_server| string() }}
+!
+ip domain name {{ domain_name| string() }}
+!
+vtp domain {{ vtp_domain| string() }}
+vtp mode transparent
+!
+errdisable recovery cause all
+system mtu 9100
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+archive
+ log config
+  logging enable
+  logging size {{ config_change_log_size| int()  }}
+  notify syslog contenttype plaintext
+  hidekeys
+!
+username {{ local_user| string() }} privilege 15 secret 0 {{ local_user_password| string() }}
+
+ip ssh source-interface Loopback0
+ip ssh version 2
+ip scp server enable
+
+no ip http server 
+no ip http secure-server 
+ip http secure-active-session-modules none
+ip http active-session-modules none
+
+no ip access-list standard {{ snmp_acl_name | string()}}
+ip access-list standard {{ snmp_acl_name| string()}}     ! revisit as more IPs than vars
+ permit {{ IP_APIC_EM_Servers| ipaddr('address') }}
+ permit {{ IP_PI_Servers| ipaddr('address') }}
+ permit {{ IP_SNMP_Servers| ipaddr('address') }}
+
+ip access-list extended ACL-DEFAULT
+ permit udp any any eq domain
+ permit udp any eq bootpc any eq bootps
+ deny   ip any any
+
+ip access-list extended ACL_Pre_Auth
+ permit ip any host {{ IP_DNS| ipaddr('address') }}
+ permit udp any eq bootpc any eq bootps
+ permit udp any any eq domain
+ permit udp any any eq tftp
+ permit icmp any any echo
+ permit icmp any any echo-reply
+ deny   ip any any
+
+ip access-list extended ACL_WEBAUTH_REDIRECT
+ permit tcp any any eq www
+ permit tcp any any eq 443
+ip access-list extended BLACKHOLE
+ permit tcp any any eq www
+ permit tcp any any eq 443
+!
+logging snmp-trap emergencies
+logging snmp-trap alerts
+logging snmp-trap critical
+logging snmp-trap errors
+logging snmp-trap warnings
+logging snmp-trap informational
+logging source-interface Loopback0
+logging host {{ IP_SYSLOG_server| ipaddr('address') }}
+logging trap informational 
+logging buffered 1000000 debugging
+!
+snmp-server community {{ ro_community_string| string() }} RO {{ snmp_acl_name| string() }}
+snmp-server community {{ rw_community| string() }} RW {{ snmp_acl_name| string() }}
+
+tacacs server {{ tacacs_server1| string() }}
+ address ipv4 {{ tacacs_server1_IP| ipaddr('address') }}
+ key {{ tacacs_server_key| string()}}
+
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+!
+radius server {{ radius_server1| string() }}
+ address ipv4 {{ IP_radius_server1| ipaddr('address') }} auth-port 1812 acct-port 1813
+ key  0 {{ radius_key| string() }}
+!
+radius server {{ radius_server2| string() }}
+ address ipv4 {{ IP_radius_server2| ipaddr('address') }} auth-port 1812 acct-port 1813
+ key  0 {{ radius_key| string() }}
+ 
+
+configuration mode exclusive
+!
+line vty 0 16
+ transport input ssh
+ transport output ssh
+!
+ntp server {{ prefered_ntp_server| string() }} prefer
+ntp server {{ secondary_ntp_server| string() }}
+!!!@

@@ -1,0 +1,33 @@
+!!! Platform: Routers, Switches OS: 12.2
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, Catalyst3850, OS: IOSXE 16.3.1
+!!! Desc: AAA config for base Identity Based Networking
+!!! Vars: 
+!!! radius_group
+!!! radius_server
+!!! radius_server_ip
+!!! radius_auth_port
+!!! radius_acct_port
+!!! radius_key
+
+
+aaa authentication dot1x default group {{radius_group | str()}}
+aaa authorization network default group {{radius_group | str()}} local
+aaa authorization auth-proxy default group {{radius_group | str()}}
+aaa accounting network default start-stop group {{radius_group | str()}}
+!
+aaa server radius dynamic-author
+ client {{radius_server_ip | ipaddr('address')}} server-key {{radius_key | str()}}
+ auth-type any
+! 
+radius server {{radius_server | str()}}
+ address ipv4 {{radius_server_ip | ipaddr('address')}} auth-port {{radious_auth_port | default(1645) | str()}} acct-port {{radious_acct_port | default(1646) | str()}}
+ key radius
+!
+radius-server dead-criteria time 10 tries 1
+radius-server deadtime 1
+!
+aaa group server radius {{radius_group | str()}}
+ server name {{radius_server | str()}}
+!
+aaa new-model
+aaa session-id common  

@@ -1,0 +1,21 @@
+!!! MACRO name block_voip_on_wan_link
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, OS:
+!!! Preconditions:
+!!! Desc: In some cases, an administrator may want to force IP phones into SRST mode when a failover to a backup WAN link occurs. Implementing this blocking avoids transmitting voice over a lossy link, and it decreases the cost of a failure by reducing data usage while maintaining the dial tone that end-users expect. This configuration can be applied to the backup router of a dual router design or to the secondary link of a single router design. This configuration can also be used on any WAN interface when centralized voice registrations are not wanted at a particular remote site.
+!!! Usage: clean
+!!! Tags: voice, cucm, voip, sip, sccp, acl
+!!! Vars: Only use "_" special characters in variable names
+!!! $interface_to_block: ; WAN interface to which the administrator wishes to block voice traffic.
+
+ip access-list extended ACL-VOIP-CONTROL 
+  deny tcp any any eq 5060
+  deny udp any any eq 5060
+  deny tcp any any eq 5061
+  deny udp any any eq 5061
+  deny tcp any any eq 2000
+  deny tcp any any eq 2443
+  deny udp any any range 16384 32767 
+  permit ip any any
+
+interface {{ interface_to_block| string() }}
+  ip access-group ACL-VOIP-CONTROL in

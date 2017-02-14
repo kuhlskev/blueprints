@@ -1,0 +1,57 @@
+<ootb-template>
+<template-metadata name="router_security_hardening">
+<template-details>
+<description> Hardening network devices is an import aspect of ensuring network security. This Blueprint accomplishes that by disabling services that are not needed, tracking CPU and memory use, limiting the amount of time that one can be logged into the console, and more.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+</param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name router_security_hardening
+!!! Platform: ISR2951, ISR2921, ISR2911, ISR3925, ISR3945, ISR4451X OS:
+!!! Preconditions:
+!!! Desc: Hardening network devices is an import aspect of ensuring network security. This Blueprint accomplishes that by disabling services that are not needed, tracking CPU and memory use, limiting the amount of time that one can be logged into the console, and more.
+!!! Usage: clean
+!!! Tags: security, hardening
+!!! Vars: Only use "_" special characters in variable names
+
+service password-encryption
+service tcp-keepalives-in
+service tcp-keepalives-out
+
+no service tcp-small-servers
+no service udp-small-servers
+
+ip tcp syswait-time 10
+
+no ip finger
+no ip http server
+
+snmp-server enable traps cpu threshold
+
+memory reserve console 4096
+
+exception memory ignore overflow io
+exception memory ignore overflow processor
+
+
+
+line con 0
+ exec-timeout 10 0
+line vty 0 4
+ exec-timeout 10 0
+</clicommand>
+</cli>
+</config>
+</ootb-template>

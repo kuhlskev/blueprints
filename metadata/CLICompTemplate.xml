@@ -1,0 +1,3429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><com.cisco.ifm.template.importExport.ExportContainer>
+  <confContainer class="com.cisco.ifm.config.model.CompositeTemplate">
+    <instanceUuid>b1003753-c6d9-4431-bc99-e12a378f191c</instanceUuid>
+    <instanceId>537739</instanceId>
+    <authEntityId>537739</authEntityId>
+    <authEntityClass>707276031</authEntityClass>
+    <__orderedListOEIndex>0</__orderedListOEIndex>
+    <__creationOrderIndex>0</__creationOrderIndex>
+    <__isBeingChanged>false</__isBeingChanged>
+    <instanceVersion>0</instanceVersion>
+    <author>root</author>
+    <contentID>null</contentID>
+    <creationTime class="sql-timestamp">2016-06-21 00:23:57.559</creationTime>
+    <description>This template is used to configure basic configuration in Katana</description>
+    <deviceType class="dynamic-proxy">Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+    <displayName>null</displayName>
+    <displayPath>null</displayPath>
+    <hasMandatoryFields>false</hasMandatoryFields>
+    <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+    <name>5760 WLC Basic Configuration</name>
+    <numberOfRuns>0</numberOfRuns>
+    <parentId>-1112</parentId>
+    <type>COMPOSITE</type>
+    <Tags class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+      <key class="long">537739</key>
+      <dirty>false</dirty>
+    </Tags>
+    <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+      <key class="long">537739</key>
+      <dirty>false</dirty>
+    </configGroupMNEMapping>
+    <memberOrder class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.memberOrder</role>
+      <key class="long">537739</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <string>537573</string>
+          <string>537573</string>
+        </entry>
+        <entry>
+          <string>537576</string>
+          <string>537576</string>
+        </entry>
+        <entry>
+          <string>537565</string>
+          <string>537565</string>
+        </entry>
+        <entry>
+          <string>537666</string>
+          <string>537666</string>
+        </entry>
+        <entry>
+          <string>537644</string>
+          <string>537644</string>
+        </entry>
+        <entry>
+          <string>537668</string>
+          <string>537668</string>
+        </entry>
+        <entry>
+          <string>537623</string>
+          <string>537623</string>
+        </entry>
+        <entry>
+          <string>537539</string>
+          <string>537539</string>
+        </entry>
+        <entry>
+          <string>537619</string>
+          <string>537619</string>
+        </entry>
+        <entry>
+          <string>537618</string>
+          <string>537618</string>
+        </entry>
+        <entry>
+          <string>537660</string>
+          <string>537660</string>
+        </entry>
+        <entry>
+          <string>537671</string>
+          <string>537671</string>
+        </entry>
+      </storedSnapshot>
+      <set class="linked-hash-set">
+        <string>537660</string>
+        <string>537573</string>
+        <string>537576</string>
+        <string>537618</string>
+        <string>537619</string>
+        <string>537623</string>
+        <string>537666</string>
+        <string>537565</string>
+        <string>537671</string>
+        <string>537668</string>
+        <string>537539</string>
+        <string>537644</string>
+      </set>
+    </memberOrder>
+    <members class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.members</role>
+      <key class="long">537739</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>6774165c-3604-4d01-9bd1-ef9df899f94c</instanceUuid>
+            <instanceId>545560</instanceId>
+            <authEntityId>545560</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537619</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>3558dc4f-1416-4ecb-abce-1f8ab4e1f355</instanceUuid>
+            <instanceId>545561</instanceId>
+            <authEntityId>545561</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537623</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>4c48a0c1-d9cd-47ea-89f3-786f7cb5cd9d</instanceUuid>
+            <instanceId>545562</instanceId>
+            <authEntityId>545562</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537666</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>c4d800a3-cf5e-4a47-892b-32118e522c43</instanceUuid>
+            <instanceId>545563</instanceId>
+            <authEntityId>545563</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537565</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>960b1670-9b1f-461d-859c-349978a914f5</instanceUuid>
+            <instanceId>545564</instanceId>
+            <authEntityId>545564</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537671</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>11613457-ed04-4864-9738-6814fc4a9e6e</instanceUuid>
+            <instanceId>545565</instanceId>
+            <authEntityId>545565</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537668</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>dc06fadf-66c2-49fa-a429-1443da6345a7</instanceUuid>
+            <instanceId>545566</instanceId>
+            <authEntityId>545566</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537539</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>83e66276-ca9c-4823-9635-62e661d18bd2</instanceUuid>
+            <instanceId>545567</instanceId>
+            <authEntityId>545567</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537644</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>ec9d1b2f-b441-43b0-bd03-6ffd63e4765c</instanceUuid>
+            <instanceId>545556</instanceId>
+            <authEntityId>545556</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537660</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>08f3aafb-780e-42ae-b96d-6b0c44b1b940</instanceUuid>
+            <instanceId>545557</instanceId>
+            <authEntityId>545557</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537573</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>098e86f7-aa81-4d9a-92e4-448082f545f6</instanceUuid>
+            <instanceId>545558</instanceId>
+            <authEntityId>545558</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537576</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>18369e53-b69f-4227-b584-701545120023</instanceUuid>
+            <instanceId>545559</instanceId>
+            <authEntityId>545559</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <instanceVersion>0</instanceVersion>
+            <memberID>537618</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+      </storedSnapshot>
+      <set>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[2]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[3]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[4]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[5]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[6]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[7]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[8]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[9]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[10]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[11]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[12]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+      </set>
+    </members>
+  </confContainer>
+  <listContainers>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>e2498db9-4720-45e0-8f6a-2f0cb137e63b</instanceUuid>
+        <instanceId>537660</instanceId>
+        <authEntityId>537660</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538659</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:46.913</creationTime>
+        <description>This template is used to create enabled WPA12 with CCKM as authe Key MAnagement </description>
+        <deviceType class="dynamic-proxy">Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>wpa12CCKM</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>wpa12CCKM</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:46.913</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537660</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537660</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>This template is used to create enabled WPA12 with CCKM as authe Key MAnagement </description>
+            <author>Cisco Systems</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for wpa12CCKM</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>profileName</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>profileName</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>profileName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>wlanId[3850|3650|4500 Series 1..64, 5760 Series 1..512]</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>wlanId</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>512</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>wlanId</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>ssidName</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>ssidName</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>ssidName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>clientVlanName</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>clientVlanName</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>clientVlanName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>authList</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>authList</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>authList</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>wpa12CCKM parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>wpa12CCKM</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>do terminal width 0
+wlan $profileName $wlanId $ssidName
+client vlan $clientVlanName
+security wpa akm cckm
+security wpa wpa1
+security wpa wpa1 ciphers aes
+security wpa wpa1 ciphers tkip
+security wpa wpa2
+security wpa wpa2 ciphers tkip
+security dot1x authentication-list $authList
+no shutdown
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>b03cd9f6-e668-4602-b036-1ad36ce90c14</instanceUuid>
+        <instanceId>537573</instanceId>
+        <authEntityId>537573</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538572</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:30.342</creationTime>
+        <description>Configure Device IP</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure Device IP</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure Device IP</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:30.342</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537573</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537573</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure Device IP</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure Device IP</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Management Interface Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Management Interface Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>managementinterfacename</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Management Interface IP</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Management Interface IP</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mangementinterfaceip</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Management Interface Mask</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Management Interface Mask</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>subnetmask</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Destination prefix</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Destination prefix</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>destinationprefix</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Destination prefix mask</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Destination prefix mask</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>destinationmask</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Forwarding router&apos;s address</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Forwarding router&apos;s address</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>forwardingaddress</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure Device IP parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure Device IP</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>Interface $managementinterfacename
+ip address $mangementinterfaceip $subnetmask
+exit
+#if($destinationprefix != &quot;&quot; &amp;&amp; $destinationmask != &quot;&quot; &amp;&amp; $forwardingaddress != &quot;&quot;)
+ip route $destinationprefix $destinationmask $forwardingaddress
+#end
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>d9e429ff-c703-498f-9cba-e0f2f56afe39</instanceUuid>
+        <instanceId>537576</instanceId>
+        <authEntityId>537576</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538575</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:30.908</creationTime>
+        <description>Configure Logging</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure Logging</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure Logging</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:30.908</publishTime>
+        <softwareType>IOS</softwareType>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537576</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537576</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure Logging</description>
+            <author>Cisco Systems</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure Logging</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Logging Host (Hostname or IP Address)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Logging Host</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>hostname</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Trap Level (Enter 0-7)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Trap Level</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>7</max>
+                      <pattern> alerts - Immediate action needed  (severity=1) ; critical - Critical conditions (severity=2) ; debugging - Debugging messages  (severity=7) ; emergencies - System is unusable (severity=0) ; errors - Error conditions (severity=3) ; informational - Informational messages  (severity=6) ; notifications - Normal but significant conditions (severity=5) ; warnings - Warning conditions  (severity=4)</pattern>
+                    </syntax>
+                    <name>trap_level</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Logging severity level (Enter &lt;0-7&gt;)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Logging severity level</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>7</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>severity_level</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Logging buffer size (Enter &lt;4096-2147483647&gt;)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Logging buffer size</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>4096</min>
+                      <max>2147483647</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>buffer_size</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Monitor Level (Enter &lt;0-7&gt;)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Monitor Level</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>7</max>
+                      <pattern> &lt;0-7&gt;  Logging severity level </pattern>
+                    </syntax>
+                    <name>monitor</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Console Level (Enter &lt;0-7&gt;)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Console Level</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>7</max>
+                      <pattern>&lt;0-7&gt;  Logging severity level</pattern>
+                    </syntax>
+                    <name>console</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure Logging parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure Logging</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>logging on
+logging $hostname
+#if($severity_level != &quot;&quot;)
+    logging buffered $severity_level
+#end
+#if($buffer_size != &quot;&quot;)
+    logging buffered $buffer_size
+#end
+
+#if($trap_level  != &quot;&quot;)
+   logging trap $trap_level
+#end
+
+#if($monitor  != &quot;&quot;)
+   logging monitor $monitor
+#end
+
+#if($console  != &quot;&quot;)
+logging console $console
+#end
+
+
+
+
+
+
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform>IOS</platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>a2865fd9-6fab-4d36-9e30-5ca7956edcb4</instanceUuid>
+        <instanceId>537618</instanceId>
+        <authEntityId>537618</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538617</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:37.788</creationTime>
+        <description>Configure VLAN For CUWN-IOS</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure VLAN For CUWN-IOS</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure VLAN For CUWN-IOS</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:37.788</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537618</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537618</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure VLAN For CUWN-IOS</description>
+            <author>Cisco Systems</author>
+            <hidden>true</hidden>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure VLAN</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Operation</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Create</value>
+                        <label>Create</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Delete</value>
+                        <label>Delete</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>option</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>VlanId</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>VlanId</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>vlanid</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Vlan Name(Vlan name should be a single word)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>VlanName</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>vlanName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Interface Name[Eg: Gi1/0/1]</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>InterfaceName</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>interfaceName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Mode</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Access</value>
+                        <label>Access</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Trunk</value>
+                        <label>Trunk</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mode</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure VLAN parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure VLAN For CUWN-IOS</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3650 Series Switches</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>
+#if ($option==&quot;Create&quot;)
+	#if ($vlanid !=&quot;&quot;)
+		vlan $vlanid
+		#if ($vlanName !=&quot;&quot;)
+			name $vlanName
+		#end
+		exit
+		#if ($interfaceName !=&quot;&quot;)
+			interface $interfaceName
+			#if(${mode}  == &quot;Access&quot;)
+  				switchport mode access
+  				switchport access vlan $vlanid   
+			#end
+			#if(${mode}  == &quot;Trunk&quot;)
+  				switchport mode trunk
+  				switchport trunk allowed vlan add $vlanid   
+			#end
+		#end
+		exit
+	#end
+#end
+
+#if ($option==&quot;Delete&quot;)
+	#if ($vlanid !=&quot;&quot;)
+		no vlan $vlanid
+		#if ($interfaceName !=&quot;&quot;)
+			interface $interfaceName
+			#if(${mode}  == &quot;Access&quot;)
+  				no switchport mode access
+  				no switchport access vlan $vlanid   
+			#end
+			#if(${mode}  == &quot;Trunk&quot;)
+  				no switchport mode trunk
+  				no switchport trunk allowed vlan $vlanid   
+			#end
+			exit
+		#end
+	#end
+#end	
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>bd017350-a4ba-4e84-a4d4-1f8fea55e24a</instanceUuid>
+        <instanceId>537619</instanceId>
+        <authEntityId>537619</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538618</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:37.877</creationTime>
+        <description>Template for Mobility Controller</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Mobility_Controller</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Mobility_Controller</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:37.877</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537619</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537619</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Template for Mobility Controller</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Mobility_Controller</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Wireless Managment Interface Vlan ID:</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Wireless Managment Interface Vlan ID:</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>vlanId</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Wireless Managment Interface Vlan Name:</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Wireless Managment Interface Vlan Name:</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>vlanName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Wireless Managment Interface IP:</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Wireless Managment Interface IP:</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>ip_addr</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Wireless Managment Interface Mask:</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Wireless Managment Interface Mask:</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mask</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Switch Peer Group Name:</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Switch Peer Group Name:</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern>[^\s]*</pattern>
+                    </syntax>
+                    <name>spg_1</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Mobility Agents Wireless Managment IPs(Comma separated):</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Mobility Agents Wireless Managment IPs(Comma separated):</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>spg_mems</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Enable Mobility Oracle(Optional):</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Enable Mobility Oracle(Optional):</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>enable_mo</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Mobility_Controller parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Mobility_Controller</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>exit
+terminal width 512
+conf t
+vlan $vlanId
+    #if($vlanId != &quot;1&quot;)
+        #if($vlanName != &quot;&quot;)
+            name $vlanName
+        #end
+    #end
+    exit
+
+interface vlan $vlanId
+    #if($ip_addr != &quot;&quot; &amp;&amp; $mask != &quot;&quot;)
+        ip address $ip_addr $mask
+    #end
+        exit
+
+wireless management interface vlan $vlanId
+
+#if($spg_1 != &quot;&quot;)
+    wireless mobility controller peer-group $spg_1
+
+    #if($spg_mems != &quot;&quot;)
+        #foreach ($spg_mem in $spg_mems.split(&quot;,&quot;))
+            wireless mobility controller peer-group $spg_1 member ip $spg_mem
+        #end
+    #end
+#end
+
+#if($enable_mo == &quot;true&quot;)
+    wireless mobility oracle 
+#end
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>cf107972-bd4e-46ff-9939-50ee8376a3dc</instanceUuid>
+        <instanceId>537623</instanceId>
+        <authEntityId>537623</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538622</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:41.915</creationTime>
+        <description>AP Primary Sec Ter Controller Config</description>
+        <deviceType class="dynamic-proxy">Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>AP Primary Sec Ter Controller Config</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>AP Primary Sec Ter Controller Config</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:41.915</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537623</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537623</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>AP Primary Sec Ter Controller Config</description>
+            <author>Cisco Systems</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for AP Primary Sec Ter Controller Config</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>AP Names (seperated by comma)</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>AP Names (seperated by comma)</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>apNameList</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Primary Controller Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Primary Controller Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>primaryControllerName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Primary Controller IP Address</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Primary Controller IP Address</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>primaryControllerIpAddress</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Secondary Controller Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Secondary Controller Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>secondaryControllerName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Secondary Controller IP Address</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Secondary Controller IP Address</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>secondaryControllerIpAddress</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Tertiary Controller Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Tertiary Controller Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>tertiaryControllerName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Tertiary Controller IP Address</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Tertiary Controller IP Address</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>tertiaryControllerIpAddress</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>AP Primary Sec Ter Controller Config parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>AP Primary Sec Ter Controller Config</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>exit
+#set ($apNames=$apNameList.split(&quot;,&quot;))
+terminal width 0
+#foreach ($apName in $apNames)
+  ap name $apName controller primary $primaryControllerName $primaryControllerIpAddress
+  #if($secondaryControllerName != &quot;&quot; &amp;&amp; $secondaryControllerIpAddress != &quot;&quot;)
+  ap name $apName controller secondary $secondaryControllerName $secondaryControllerIpAddress
+  #end
+  #if($tertiaryControllerName != &quot;&quot; &amp;&amp; $tertiaryControllerIpAddress != &quot;&quot;)
+  ap name $apName controller tertiary $tertiaryControllerName $tertiaryControllerIpAddress
+  #end
+#end
+config t
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>8c2946f0-dc5f-4e03-ba64-d6c9e361ead4</instanceUuid>
+        <instanceId>537666</instanceId>
+        <authEntityId>537666</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538665</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:47.635</creationTime>
+        <description>Configure NTP</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure NTP</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure NTP</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:47.635</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537666</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537666</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure NTP</description>
+            <author>Cisco Systems</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure NTP</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>NTP Configuration</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Server</value>
+                        <label>Server</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Peer</value>
+                        <label>Peer</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>1</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>server_conf</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Host</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Host</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>server_ip</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>NTP version number</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>None</value>
+                        <label>none</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1</value>
+                        <label>1</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>2</value>
+                        <label>2</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>3</value>
+                        <label>3</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>4</value>
+                        <label>4</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>version</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Preferred</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>No</value>
+                        <label>No</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Yes</value>
+                        <label>Yes</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>1</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>isPreferred</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Peer key number &lt;0-4294967295&gt;</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Peer key number &lt;0-4294967295&gt;</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>4294967295</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>peer_key</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>NTP Authentication</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>None</value>
+                        <label>none</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Disable</value>
+                        <label>Disable</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Enable</value>
+                        <label>Enable</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>1</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>enableAuthentication</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Authentication Key number &lt;1-4294967295&gt;</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Authentication Key number &lt;1-4294967295&gt;</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4294967295</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>auth_key</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>MD5 Number</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>MD5 Number</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>md5Number</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Access Type</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>None</value>
+                        <label>none</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>peer</value>
+                        <label>peer</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>query-only</value>
+                        <label>query-only</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>serve</value>
+                        <label>serve</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>serve-only</value>
+                        <label>serve-only</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>accessType</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>ACL Number[1-99]</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>ACL Number[1-99]</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>99</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>aclNumber</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Trusted Key &lt;1-4294967295&gt;</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Trusted Key &lt;1-4294967295&gt;</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4294967295</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>trusted_key</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure NTP parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure NTP</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>#if($server_conf==&quot;Server&quot;)
+  #if($peer_key != &quot;&quot;)
+     #if($version != &quot;none&quot; and $version != &quot;None&quot;)
+        #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp server $server_ip key $peer_key version $version prefer
+        #else 
+         ntp server $server_ip key $peer_key version $version
+        #end
+     #else
+        #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp server $server_ip key $peer_key prefer
+        #else 
+          ntp server $server_ip key $peer_key
+        #end
+     #end
+  #else
+
+     #if($version != &quot;none&quot; and $version != &quot;None&quot;)
+        #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp server $server_ip  version $version prefer
+        #else 
+          ntp server $server_ip version $version
+        #end
+     #else
+        #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp server $server_ip  prefer
+        #else 
+          ntp server $server_ip
+        #end
+     #end
+
+  #end
+#else
+
+   #if($peer_key != &quot;&quot;)
+     #if($version  != &quot;none&quot; and $version != &quot;None&quot;)
+      #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp peer $server_ip key $peer_key normal-sync version $version prefer
+      #else 
+          ntp peer $server_ip key $peer_key normal-sync version $version
+     #end
+    #else
+      #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp peer $server_ip key $peer_key normal-sync prefer
+      #else 
+         ntp peer $server_ip key $peer_key normal-sync
+     #end
+   #end
+ #else
+
+     #if($version  != &quot;none&quot; and $version != &quot;None&quot;)
+      #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp peer $server_ip version $version prefer
+      #else 
+          ntp peer $server_ip version $version
+     #end
+    #else
+      #if($isPreferred  != &quot;&quot; &amp;&amp; $isPreferred  != &quot;No&quot;)
+          ntp peer $server_ip  prefer
+      #else 
+         ntp peer $server_ip 
+     #end
+   #end
+
+ #end
+
+#end
+
+#if($enableAuthentication  != &quot;none&quot;)
+      #if($enableAuthentication  == &quot;Enable&quot;)
+         ntp authenticate
+         #if($auth_key  != &quot;&quot;)
+         #if($md5Number  != &quot;&quot;)
+         ntp authentication-key $auth_key md5 $md5Number
+         #end
+         #end
+      #else 
+         no ntp authenticate
+         #if($auth_key  != &quot;&quot;)
+         #if($md5Number  != &quot;&quot;)
+         no ntp authentication-key $auth_key md5 $md5Number
+         #end
+         #end
+      #end
+
+#end
+
+#if($trusted_key != &quot;&quot;)
+    ntp trusted-key $trusted_key
+#end
+
+#if($accessType  != &quot;none&quot;)
+  #if($aclNumber  != &quot;&quot;)
+  ntp access-group $accessType $aclNumber
+  #end
+#end
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>0665508c-13b7-40bf-8a51-59484d493b0e</instanceUuid>
+        <instanceId>537565</instanceId>
+        <authEntityId>537565</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538564</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:28.899</creationTime>
+        <description>CUWN-IOS and UA Radius Auth Server</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>CUWN-IOS and UA Radius Auth Server</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>CUWN-IOS and UA Radius Auth Server</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:28.899</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537565</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537565</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>CUWN-IOS and UA Radius Auth Server</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for NGWC Radius Auth Server</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Group Type</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Default Radius</value>
+                        <label>Default Radius</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>User Defined Radius</value>
+                        <label>User Defined Radius</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>Aa1</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Group Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Group Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>GroupName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Server Name </description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Server Name </label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>ServerName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Server Address</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Server Address</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>IPv4 Address</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>ServerAddress</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Auth Port</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1645</value>
+                        <label>Auth Port</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>authPort</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Server Key</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Server Key</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>ServerKey</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Time Out</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>5</value>
+                        <label>Time Out</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>1000</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>timeOut</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Authentication Protocol</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>dot1x</value>
+                        <label>dot1x</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>eou</value>
+                        <label>eou</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>ppp</value>
+                        <label>ppp</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>protocal</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Method List Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Method List Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>methodListName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>NGWC Radius Auth Server parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>CUWN-IOS and UA Radius Auth Server</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3650 Series Switches</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>
+       #if(${GroupName})
+              
+              #if(${ServerName})
+
+                 #if(${ServerAddress})
+                       aaa new-model
+                       radius server ${ServerName}
+                       address ipv4 ${ServerAddress} auth-port ${authPort}
+                      #if(${ServerKey})
+                          key ${ServerKey}
+                      #end
+                      #if(${timeOut})
+                            timeout ${timeOut}
+                      #end
+                       exit
+                  #end
+
+              #end
+   #end
+
+ 
+
+#if(${Aa1}  != &quot;Default Radius&quot;)
+                    
+        
+         #if(${GroupName} != &quot;&quot;)
+              
+              #if(${ServerName} != &quot;&quot;)
+                   aaa new-model
+	           aaa group server radius  ${GroupName}
+	           server name  ${ServerName}
+	           exit
+              #end
+        #end
+ #end
+
+#if(${Aa1}  != &quot;Default Radius&quot;)
+   #if(${methodListName}  != &quot;&quot;)
+                            
+         #if(${GroupName} != &quot;&quot;)
+              aaa authentication ${protocal} ${methodListName} group ${GroupName}                 	           
+        #end
+  #end
+#else
+     #if(${methodListName}  != &quot;&quot;)
+                            
+         #if(${Aa1}  eq &quot;Default Radius&quot;)
+              aaa authentication ${protocal} ${methodListName} group radius                 	           
+        #end
+  #end
+
+#end
+
+
+
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>e738b592-970e-4bd2-98bc-3a18d4c09fcd</instanceUuid>
+        <instanceId>537671</instanceId>
+        <authEntityId>537671</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538670</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:48.008</creationTime>
+        <description>Configures SNMP</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure SNMP</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure SNMP</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:48.008</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537671</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537671</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configures SNMP</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure SNMP</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Community String</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Community String</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>comString</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Type (Select RO/RW)</description>
+                    <htmlComponent>select</htmlComponent>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>RO</value>
+                        <label>RO</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>RW</value>
+                        <label>RW</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>true</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>type</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure SNMP parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure SNMP</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>
+#if($comString != &quot;&quot;)
+snmp-server community $comString  $type 
+#end
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>cf5305ee-ceff-43b7-83e0-c010ddc155b3</instanceUuid>
+        <instanceId>537668</instanceId>
+        <authEntityId>537668</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538667</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:47.772</creationTime>
+        <description>Configure Local Management User</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Local Management User</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Local Management User</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:47.772</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537668</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537668</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure Local Management User</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Local Management User</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>User Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>User id</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>user_id</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Password</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Password</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>password</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Privilege level (Enter 0-15))</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>Privilege</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>15</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>privilege_level</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Secret or Password</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Secret</value>
+                        <label>Secret</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Password</value>
+                        <label>Password</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>1</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>sec_or_pwd</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Local Management User parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Local Management User</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>#if($sec_or_pwd == &quot;Password&quot;)
+         #if ($privilege_level != &quot;&quot;)
+                   username $user_id privilege $privilege_level password $password
+         #else
+                  username $user_id password $password
+         #end
+#else
+          #if ($privilege_level != &quot;&quot;)
+                   username $user_id privilege $privilege_level secret $password
+         #else
+                   username $user_id secret $password
+         #end
+         
+#end
+
+
+
+
+
+
+
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>45b6caf0-8e84-44a0-bb82-861e372273c5</instanceUuid>
+        <instanceId>537539</instanceId>
+        <authEntityId>537539</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>Cisco Systems</author>
+        <contentID>538538</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:24.246</creationTime>
+        <description>Configure Interface</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Configure Interface</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Configure Interface</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:24.246</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537539</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537539</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Configure Interface</description>
+            <author>Cisco Systems</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Configure Interface</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Interface Name</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Interface Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>InterfaceName</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Description</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Description</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>Description</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Administrative Mode</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>No Change</value>
+                        <label>No Change</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Access</value>
+                        <label>Access</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Trunk</value>
+                        <label>Trunk</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Dynamic Auto</value>
+                        <label>Dynamic Auto</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Dynamic Desirable</value>
+                        <label>Dynamic Desirable</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>A1</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Static Access VLan</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Static Access VLan</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>StaticAccessVLan</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Trunk Allowed VLan</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Trunk Allowed VLan</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>TrunkAllowedVLan</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>VLan for Voice Traffic</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>VLan for Voice Traffic</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>VoiceVlan</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Native VLan</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Native VLan</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>NativeVLan</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Port Fast</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>NoChange</value>
+                        <label>No Change</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Disable</value>
+                        <label>Disable</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Enable</value>
+                        <label>Enable</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>PortFast</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Duplex</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>NoChange</value>
+                        <label>No Change</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Auto</value>
+                        <label>Auto</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Half</value>
+                        <label>Half</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Full</value>
+                        <label>Full</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>duplexField</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Interface Speed</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>NoChange</value>
+                        <label>No Change</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Auto</value>
+                        <label>Auto</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>10 Mbps</value>
+                        <label>10 Mbps</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>100 Mbps</value>
+                        <label>100 Mbps</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1000 Mbps</value>
+                        <label>1000 Mbps</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>spd</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Configure Interface parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Configure Interface</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>#if (${InterfaceName})
+        interface ${InterfaceName}
+       #if (${Description} != &quot;&quot;)
+            description ${Description}
+        #end
+        #if(${A1}  == &quot;Access&quot;)
+            switchport mode access
+            #if(${StaticAccessVLan} != &quot;&quot;)
+                switchport ACCess vlan ${StaticAccessVLan}   
+            #end
+        #end
+        
+       #if(${A1}  == &quot;Trunk&quot;)
+            switchport mode trunk
+            #if(${TrunkAllowedVLan} != &quot;&quot;)
+                switchport trunk allowed vlan ${TrunkAllowedVLan}   
+            #end
+            #if(${NativeVLan} != &quot;&quot;)
+                switchport trunk native vlan ${NativeVLan}   
+            #end
+        #end
+        
+        #if(${A1}  == &quot;Dynamic Auto&quot;)
+            switchport mode dynamic auto
+        #end
+
+        #if(${A1}  == &quot;Dynamic Desirable&quot;)
+            switchport mode dynamic desirable
+        #end
+
+        #if(${VoiceVlan} != &quot;&quot;)
+             switchport voice vlan ${VoiceVlan}
+        #end
+
+        #if(${PortFast} != &quot;&quot;)
+               #if(${PortFast}  == &quot;Disable&quot;)
+                   no spanning-tree portfast   
+               #elseif(${PortFast}  == &quot;Enable&quot;)
+                   spanning-tree portfast              
+               #end
+        #end
+
+         #if(${spd}!= &quot;&quot;)
+               #if(${spd}  == &quot;Auto&quot;)
+                   speed auto   
+               #elseif(${spd}  == &quot;10 Mbps&quot;)
+                   speed 10
+               #elseif(${spd}  == &quot;100 Mbps&quot;)
+                    speed 100
+                #elseif(${spd}  == &quot;1000 Mbps&quot;)
+                    speed 1000
+               #end
+        #end
+
+        #if(${duplexField}!= &quot;&quot;)
+               #if(${duplexField}  == &quot;Auto&quot;)
+                   duplex auto   
+               #elseif(${duplexField}  == &quot;Half&quot;)
+                   duplex half
+               #elseif(${duplexField}  == &quot;Full&quot;)
+                   duplex full
+               #end
+        #end
+exit
+#end
+
+
+
+
+
+
+
+
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>70b5008b-e27b-4be6-9b66-9b4f114b1228</instanceUuid>
+        <instanceId>537644</instanceId>
+        <authEntityId>537644</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>538643</contentID>
+        <creationTime class="sql-timestamp">2016-06-21 00:23:44.612</creationTime>
+        <description>Provision Wired or Wireless Guest Users</description>
+        <deviceType class="dynamic-proxy">Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</deviceType>
+        <displayName>Guest Users</displayName>
+        <hasMandatoryFields>true</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Guest Users</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <publishTime class="sql-timestamp">2016-06-21 00:23:44.612</publishTime>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">537644</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">537644</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description>Provision Wired or Wireless Guest Users</description>
+            <author>root</author>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Guest Users</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>User Name of the Guest Account</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Guest User Name</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>guestusername</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Password</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Password</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min></min>
+                      <max></max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>passwd</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Description</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Wireless Guest User using CLI Template</value>
+                        <label>Description</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>desc</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Year</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>0</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1</value>
+                        <label>1</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>1</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>yr</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Month</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>0</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>1</value>
+                        <label>1</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>2</value>
+                        <label>2</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>3</value>
+                        <label>3</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>4</value>
+                        <label>4</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>5</value>
+                        <label>5</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>6</value>
+                        <label>6</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>7</value>
+                        <label>7</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>8</value>
+                        <label>8</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>9</value>
+                        <label>9</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>10</value>
+                        <label>10</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>11</value>
+                        <label>11</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>11</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mon</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Day</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>Day</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>30</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>day</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Hour</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>Hour</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>23</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>hr</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Minute</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>Minute</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>59</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>min</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Second</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>0</value>
+                        <label>Second</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>0</min>
+                      <max>59</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>sec</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Attribute List</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Not-Configured</value>
+                        <label>Attribute List</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>String</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>NaN</min>
+                      <max>NaN</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>attrList</name>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Guest Users parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Guest Users</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Wireless Controller/Cisco 5760 Series Wireless LAN Controller</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>
+                do terminal width 512
+                user-name $guestusername
+                    password $passwd
+                    type network-user description &quot;$desc&quot; guest-user lifetime year $yr month $mon day $day hour $hr minute $min second $sec
+                    #if($attrList  != &quot;&quot; and $attrList != &quot;Not-Configured&quot;)
+                        aaa attribute list $attrList
+                    #end
+                exit
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform></platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+  </listContainers>
+</com.cisco.ifm.template.importExport.ExportContainer>

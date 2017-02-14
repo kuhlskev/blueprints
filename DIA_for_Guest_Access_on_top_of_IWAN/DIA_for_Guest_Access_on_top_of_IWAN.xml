@@ -1,0 +1,281 @@
+<ootb-template>
+<template-metadata name="DIA_for_Guest_Access_on_top_of_IWAN">
+<template-details>
+<description> Direct Internet Access for Guests allows Internet connected branches to send traffic directly to the Internet, rather than back to HQ, for a specific portion of traffic. In this case, the configuration enables a location to provision a seperate network, NAT the subnet to the Internet, and ensure that the subnet can't reach any of the other LAN side networks.!!! Usage: clean
+</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="DIA_LAN_INTERFACE">
+<description>The LAN interface on which direct Internet access will be served </description>
+<html-component>textbox</html-component>
+<default-value label="">GigabitEthernet0/0/0 </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="DIA_LAN_VLAN">
+<description>The VLAN on the LAN on which direct internet access will be served</description>
+<html-component>textbox</html-component>
+<default-value label="">66 </default-value>
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_LAN_IPV4_ADDRESS">
+<description>The IPv4 address of the LAN interface on which direct internet access will be served.</description>
+<html-component>textbox</html-component>
+<default-value label="">192.168.192.2 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_LAN_SUBNET_MASK">
+<description>The IPv4 subnet mask of the LAN interface on which direct internet access will be served. If you are using a second router, this will be one of two HSRP addresses.</description>
+<html-component>textbox</html-component>
+<default-value label="">255.255.255.0 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_LAN_HSRP_IPV4_ADDRESS">
+<description>The IPv4 HSRP address of the LAN that will act as default gateway.</description>
+<html-component>textbox</html-component>
+<default-value label="">192.168.192.1 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_LAN_HSRP_PRIORITY">
+<description>The HSRP priority of the LAN interface. For the primary router, use 110. For the secondary router, use 105.</description>
+<html-component>textbox</html-component>
+<default-value label="">110 </default-value>
+<data-type>Integer</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min>1</min>
+<max>65535</max>
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_WAN_INTERFACE">
+<description>The WAN interface on which the Internet is connected.</description>
+<html-component>textbox</html-component>
+<default-value label="">GigabitEthernet0/0/2 </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="DIA_WAN_IPV4_ADDRESS">
+<description>The IPv4 address of the WAN interface on which the Internet is connected.</description>
+<html-component>textbox</html-component>
+<default-value label=""> </default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter><parameter name="DIA_LAN_SUBNET_ADDRESS">
+<description>The IPv4 LAN subnet on which DIA is served. This should align with DIA_LAN_IPV4_ADDRESS and DIA_LAN_SUBNET_MASK.</description>
+<html-component>textbox</html-component>
+<default-value label="">192.168.192.0 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter><parameter name="DIA_LAN_REVERSE_SUBNET_MASK">
+<description>The IPv4 LAN subnet mask on which DIA is served. This should align with DIA_LAN_IPV4_ADDRESS and DIA_LAN_SUBNET_MASK.</description>
+<html-component>textbox</html-component>
+<default-value label="">0.0.0.255 </default-value>
+<data-type>IPv4 Address</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern />
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! MACRO name DIA_for_Guest_Access_on_top_of_IWAN
+!!! Platform: ISR2911, ISR2921, ISR2951, ISR4451X, ISR4431, ISR4321, OS: IOSXE 16.3.1
+!!! Preconditions: IWAN
+!!! Desc: Direct Internet Access for Guests allows Internet connected branches to send traffic directly to the Internet, rather than back to HQ, for a specific portion of traffic. In this case, the configuration enables a location to provision a seperate network, NAT the subnet to the Internet, and ensure that the subnet can't reach any of the other LAN side networks.
+!!! Usage: clean
+!!! Vars: Only use "_" special characters in variable names
+!!! $DIA_LAN_INTERFACE : GigabitEthernet0/0/0 ; The LAN interface on which direct Internet access will be served 
+!!! $DIA_LAN_VLAN : 66 ; The VLAN on the LAN on which direct internet access will be served
+!!! $DIA_LAN_IPV4_ADDRESS : 192.168.192.2 ; The IPv4 address of the LAN interface on which direct internet access will be served.
+!!! $DIA_LAN_SUBNET_MASK : 255.255.255.0 ; The IPv4 subnet mask of the LAN interface on which direct internet access will be served. If you are using a second router, this will be one of two HSRP addresses.
+!!! $DIA_LAN_HSRP_IPV4_ADDRESS : 192.168.192.1 ; The IPv4 HSRP address of the LAN that will act as default gateway.
+!!! $DIA_LAN_HSRP_PRIORITY : 110 ; The HSRP priority of the LAN interface. For the primary router, use 110. For the secondary router, use 105.
+!!! $DIA_WAN_INTERFACE : GigabitEthernet0/0/2 ; The WAN interface on which the Internet is connected.
+!!! $DIA_WAN_IPV4_ADDRESS : ; The IPv4 address of the WAN interface on which the Internet is connected.
+!!! $DIA_LAN_SUBNET_ADDRESS : 192.168.192.0 ; The IPv4 LAN subnet on which DIA is served. This should align with DIA_LAN_IPV4_ADDRESS and DIA_LAN_SUBNET_MASK.
+!!! $DIA_LAN_REVERSE_SUBNET_MASK : 0.0.0.255 ; The IPv4 LAN subnet mask on which DIA is served. This should align with DIA_LAN_IPV4_ADDRESS and DIA_LAN_SUBNET_MASK.
+!
+vrf definition IWAN-GUEST
+ !
+ address-family ipv4
+ exit-address-family
+!
+class-map type inspect match-any GUEST-RTR-ICMP
+ match access-group name GUEST-ICMP-IN
+class-map type inspect match-any RTR-GUEST-ICMP
+ match access-group name GUEST-ICMP-OUT
+!
+class-map type inspect match-any GUEST-RTR-DHCP
+ match access-group name GUEST-DHCP-IN
+class-map type inspect match-any RTR-GUEST-DHCP
+ match access-group name GUEST-DHCP-OUT
+!
+class-map type inspect match-any GUEST-TO-INSIDE-CLASS
+ match protocol tcp
+ match protocol udp
+ match protocol icmp
+ match access-group name GUEST-IN
+!
+class-map type inspect match-any GUEST-TO-OUTSIDE-CLASS
+ match protocol http
+ match protocol https
+ match protocol ftp
+ match access-group name GUEST-OUT
+!
+policy-map type inspect GUEST-TO-OUTSIDE-POLICY
+ class type inspect GUEST-TO-OUTSIDE-CLASS
+  inspect
+ class class-default
+  drop
+!
+policy-map type inspect GUEST-SELF-POLICY-OUT
+ class type inspect RTR-GUEST-DHCP
+  pass
+ class type inspect RTR-GUEST-ICMP
+  inspect
+ class class-default
+  drop
+!
+policy-map type inspect GUEST-SELF-POLICY-IN
+ class type inspect GUEST-RTR-DHCP
+  pass
+ class type inspect GUEST-RTR-ICMP
+  inspect
+ class class-default
+  drop
+!
+policy-map type inspect GUEST-TO-INSIDE-POLICY
+ class type inspect GUEST-TO-INSIDE-CLASS
+  inspect
+ class class-default
+  drop
+!
+!
+zone security default
+zone security OUTSIDE
+zone security GUEST
+!
+zone-pair security FROM-ROUTER source self destination OUTSIDE
+ service-policy type inspect ACL-OUT-POLICY
+zone-pair security GUEST-IN source GUEST destination default
+ service-policy type inspect GUEST-TO-INSIDE-POLICY
+zone-pair security GUEST-OUT source GUEST destination OUTSIDE
+ service-policy type inspect GUEST-TO-OUTSIDE-POLICY
+zone-pair security GUEST-RTR-IN source GUEST destination self
+ service-policy type inspect GUEST-SELF-POLICY-IN
+zone-pair security IN_OUT source default destination OUTSIDE
+ service-policy type inspect INSIDE-TO-OUTSIDE-POLICY
+zone-pair security TO-ROUTER source OUTSIDE destination self
+ service-policy type inspect ACL-IN-POLICY
+! 
+interface $DIA_LAN_INTERFACE.$DIA_LAN_VLAN
+!!interface GigabitEthernet0/0/0.66
+ encapsulation dot1Q $DIA_LAN_VLAN
+!! encapsulation dot1Q 66
+ vrf forwarding IWAN-GUEST
+ ip address $DIA_LAN_IPV4_ADDRESS $DIA_LAN_SUBNET_MASK
+!! ip address 192.168.192.2 255.255.255.0
+ ip nat inside
+ zone-member security GUEST
+ standby 1 ip $DIA_LAN_HSRP_IPV4_ADDRESS
+!! standby 1 ip 192.168.192.1
+ standby 1 priority $DIA_LAN_HSRP_PRIORITY
+!! standby 1 priority 110
+ standby 1 preempt
+!
+interface $DIA_WAN_INTERFACE
+!!interface GigabitEthernet0/0/2
+ ip nat outside
+ zone-member security OUTSIDE
+!
+ip nat inside source route-map GUEST-NAT-INET interface $DIA_WAN_INTERFACE vrf IWAN-GUEST overload
+!!ip nat inside source route-map GUEST-NAT-INET interface GigabitEthernet0/0/2 vrf IWAN-GUEST overload
+!
+ip route vrf IWAN-GUEST 0.0.0.0 0.0.0.0 $DIA_LAN_INTERFACE $DIA_WAN_IPV4_ADDRESS
+!!ip route vrf IWAN-GUEST 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0 128.107.248.254
+!
+ip access-list extended GUEST-INET
+ permit ip $DIA_LAN_SUBNET_ADDRESS $DIA_LAN_REVERSE_SUBNET_MASK any
+!! permit ip 192.168.192.0 0.0.0.255 any
+ip access-list extended GUEST-OUT
+ permit ip $DIA_LAN_SUBNET_ADDRESS $DIA_LAN_REVERSE_SUBNET_MASK any
+!! permit ip 192.168.192.0 0.0.0.255 any
+!
+route-map GUEST-NAT-INET permit 10
+ match ip address GUEST-INET
+!
+!!!@
+</clicommand>
+</cli>
+</config>
+</ootb-template>

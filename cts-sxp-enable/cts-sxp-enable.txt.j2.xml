@@ -1,0 +1,14 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:cts>
+        <ns0:sxp annotation="!! Platform: Catalyst3850, Catalyst6k !! OS: IOSXE, IOS !! Desc: Configure SXP on IOS Devices. This will help propegate Cisco TrustSec inline tagging. !! Vars: !! sxp_source_address !! sxp_password !!">
+          <ns0:enable />
+        </ns0:sxp>
+      </ns0:cts>
+    </ns0:native>
+  </config>
+</edit-config>

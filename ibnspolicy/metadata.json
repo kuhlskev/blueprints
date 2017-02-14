@@ -1,0 +1,1 @@
+{"name": "ibnspolicy", "products": [{"name": "Catalyst", "devices": ["3850", "6000"]}], "var": [{"var": "access_identity_policy", "default": "ACCESS-IDENTITY-POLICY", "type": "string()", "description": "Dummy description"}], "usage": "Clean", "OS": ["IOS-XE"], "description": "Auto-generated description for ibnspolicy"}

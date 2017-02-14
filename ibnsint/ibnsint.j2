@@ -1,0 +1,18 @@
+!!! Platform: Catalyst3850 
+!!! OS: IOSXE 16.3.1
+!!! Desc: AAA Interface config for base Access Identity Policy Identity Based Networking
+!!! Vars: 
+!!! access_interface_type
+!!! access_interface_index
+!!! access_identity_policy
+
+
+interface {{access_interface_type | default('GigabitEthernet') | str()}} {{access_interface_index | default('1/0/1') | str()}}
+  authentication timer reauthenticate server
+  access-session host-mode multi-domain
+  access-session closed
+  access-session port-control auto 
+  mab
+  dot1x pae authenticator
+  spanning-tree portfast
+  service-policy type control subscriber {{access_identity_policy | default('ACCESS-IDENTITY-POLICY') | str()}} 

@@ -1,0 +1,94 @@
+<edit-config xmlns:ns0="http://cisco.com/ns/yang/ned/ios">
+	<target>
+		<running />
+	</target>
+<config>
+    <ns0:native>
+      <ns0:flow>
+        <ns0:record annotation="!! MACRO name naas_flow_export_for_stealthwatch !! Platform: Cat3850, Cat2960X, Cat4500 OS: !! Preconditions: !! Desc: The Network as a Sensor solution utilizes Netflow v9 (Flexible NetFlow) in order to export metadata about the flows traversing the network to a product called Stealthwatch. Using this metadata, Stealtchwatch can detech annomilies on your network and catch attacks as they are occuring. This is utilized for the incoming direction. !! Usage: clean !! Tags: stealthwatch, naas, flow, fnf, netflow, security !! Vars: Only use &quot;_&quot; special characters in variable names !! $stealtchwatch_ipv4_address: ; The IPv4 address of the Stealthwatch server that the Netflow is being exported to.">
+          <ns0:name>{{ naas_flow_export_for_stealthwatchGrouping.stealtchwatch_ipv4_address | ipaddr('address') }}</ns0:name>
+          <ns0:collect>
+            <ns0:counter>
+              <ns0:bytes>
+                <ns0:long />
+              </ns0:bytes>
+              <ns0:packets>
+                <ns0:long />
+              </ns0:packets>
+            </ns0:counter>
+            <ns0:timestamp>
+              <ns0:absolute annotation="&amp;  collect timestamp absolute  rst">
+                <ns0:last />
+              </ns0:absolute>
+            </ns0:timestamp>
+          </ns0:collect>
+          <ns0:match>
+            <ns0:datalink>
+              <ns0:mac>
+                <ns0:destination>
+                  <ns0:address>
+                    <ns0:input />
+                  </ns0:address>
+                </ns0:destination>
+                <ns0:source>
+                  <ns0:address>
+                    <ns0:input />
+                  </ns0:address>
+                </ns0:source>
+              </ns0:mac>
+            </ns0:datalink>
+            <ns0:flow>
+              <ns0:cts>
+                <ns0:destination>
+                  <ns0:group-tag />
+                </ns0:destination>
+                <ns0:source>
+                  <ns0:group-tag />
+                </ns0:source>
+              </ns0:cts>
+              <ns0:direction />
+            </ns0:flow>
+            <ns0:interface>
+              <ns0:input />
+            </ns0:interface>
+            <ns0:ipv4>
+              <ns0:destination>
+                <ns0:address />
+              </ns0:destination>
+              <ns0:protocol />
+              <ns0:source>
+                <ns0:address />
+              </ns0:source>
+              <ns0:tos />
+              <ns0:ttl />
+            </ns0:ipv4>
+            <ns0:transport>
+              <ns0:destination-port />
+              <ns0:source-port />
+            </ns0:transport>
+          </ns0:match>
+        </ns0:record>
+        <ns0:exporter>
+          <ns0:name>FLOW-COLLECTOR1</ns0:name>
+          <ns0:transport>
+            <ns0:udp annotation="! destination $stealtchwatch_ipv4_address &amp;  destination stealtchwatch_ipv4_address">{{ naas_flow_export_for_stealthwatchGrouping.stealtchwatch_ipv4_address | ipaddr('address') }}</ns0:udp>
+          </ns0:transport>
+        </ns0:exporter>
+        <ns0:monitor>
+          <ns0:name>FLOW-MONITOR1-IN</ns0:name>
+          <ns0:cache>
+            <ns0:timeout>
+              <ns0:active>60</ns0:active>
+            </ns0:timeout>
+          </ns0:cache>
+          <ns0:exporter>
+            <ns0:name>FLOW-COLLECTOR1</ns0:name>
+          </ns0:exporter>
+          <ns0:record>
+            <ns0:type>FLOW-RECORD1-IN</ns0:type>
+          </ns0:record>
+        </ns0:monitor>
+      </ns0:flow>
+    </ns0:native>
+  </config>
+</edit-config>

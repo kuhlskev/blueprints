@@ -1,0 +1,48 @@
+<ootb-template>
+<template-metadata name="ibnspolicy">
+<template-details>
+<description>Auto-generated description for ibnspolicy</description>
+<author>root</author><tag-list />
+</template-details>
+<parameter-metadata>
+<param-group cliName="identity" isMandatory="true" name="Identity Commands">
+<description>Parameters for aname</description>
+<parameter name="access_identity_policy">
+<description>Dummy description</description>
+<html-component>textbox</html-component>
+<default-value label="">ACCESS-IDENTITY-POLICY</default-value>
+<data-type>String</data-type>
+<mandatory>false</mandatory>
+<isGlobal>false</isGlobal>
+<help-description />
+<syntax>
+<min />
+<max />
+<pattern>[^\s]*</pattern>
+</syntax>
+</parameter></param-group>
+</parameter-metadata>
+</template-metadata>
+<config platform="IOS">
+<device-filtering-details>
+<family value="Switches">
+<min-supported-imageversion value="IOS-XE" />
+</family>
+</device-filtering-details>
+<cli name="identity">
+<clicommand>!!! Platform: Switches OS: 12.2
+!!! Platform: Catalyst3850, OS: IOSXE 16.3.1
+!!! Desc: AAA config for base Access Identity Policy Identity Based Networking
+!!! Vars: 
+!!! access_identity_policy
+
+policy-map type control subscriber $access_identity_policy 
+!!policy-map type control subscriber access_identity_policy 
+ event session-started match-all
+  10 class always do-until-failure
+  10 authenticate using dot1x priority 10
+!!!@
+</clicommand>
+</cli>
+</config>
+</ootb-template>

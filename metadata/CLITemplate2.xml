@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="aname">
+        <template-details>
+            <description>This template is used to ...</description>
+            <author>root</author><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="aName parameters">
+                <description>Parameters for aname</description>
+                <parameter name="aStrParameterName">
+                    <description>aParameterDescription</description>
+                    <default-value label="aStrParameterName"/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <min/>
+                        <max/>
+                        <pattern>[^\s]*</pattern>
+                    </syntax>
+                </parameter>
+                <parameter name="aNumParameterName">
+                    <description>aParameterDescription</description>
+                    <default-value label="aNumParameterName"/>
+                    <data-type>Integer</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <min>1</min>
+                        <max>65535</max>
+                        <pattern/>
+                    </syntax>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config platform="">
+        <device-filtering-details>
+            <family value="Comma-separated list of product family names">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand></clicommand>
+        </cli>
+    </config>
+</ootb-template>
